@@ -1,17 +1,16 @@
-# Welcome to MkDocs
+# Sport Ludique Documentation
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+## Présentation du projet
 
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+Cette documentation permet de décrire l'architecture de Sport Ludique. \
+Les serveurs tournent majoritairement sous Linux. \
+```
+PROXMOX (Virtualisation)
+|__Web Server/Auth Portal
+|__DNS Server
+|__DHCP Server
+|__Web Server/Web App
+|__Zabbix Server/Monitoring
+|__Ticketing Solution
+|__Backup Server/Proxmox Backup Server
+```
