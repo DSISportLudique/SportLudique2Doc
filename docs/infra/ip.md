@@ -1,4 +1,4 @@
 # Adressage IP du site
 
-![schéma reseau](img/schema_reseau.png)
+![schéma reseau](/img/infra.drawio.png)
 
