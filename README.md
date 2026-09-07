@@ -10,3 +10,6 @@
 - Monitoring (zabbix ?)
 - ticketing (ocs ?)
 - backups (proxmox-backup-server)
+- conf switch
+- conf firewall
+- conf router

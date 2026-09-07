@@ -8,9 +8,12 @@ Les serveurs tournent majoritairement sous Linux. \
 PROXMOX (Virtualisation)
 |--Web Server/Auth Portal
 |--DNS Server
-|---DHCP Server
-|---Web Server/Web App
-|---Zabbix Server/Monitoring
-|---Ticketing Solution
-|---Backup Server/Proxmox Backup Server
+|--DHCP Server
+|--Web Server/Web App
+|--Zabbix Server/Monitoring
+|--Ticketing Solution
+|--Backup Server/Proxmox Backup Server
+|--Switch config
+|--Router config
+|--FW config
 ```
