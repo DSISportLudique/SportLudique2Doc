@@ -17,3 +17,8 @@ PROXMOX (Virtualisation)
 |--Router config
 |--FW config
 ```
+
+```
+Adresses Sites
+|--"Faire tous les sites"
+|--Blois |172.28.32.0-172.28.63.255|
