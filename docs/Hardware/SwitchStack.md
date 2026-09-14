@@ -2,7 +2,7 @@
 
 ## Notations
 Mode normal:
-`>` \
+`>` 
 Mode system:
 `]`
 
