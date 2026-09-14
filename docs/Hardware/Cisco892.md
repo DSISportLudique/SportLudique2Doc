@@ -42,3 +42,15 @@ Création du VLAN 150 et insertion du port 7 dans celui-ci
 
 - Interface vlan 150
 - ip address X.X.X.X 255.255.255.0
+
+## .ssh/config
+
+**/!\ Cette partie est à faire depuis le client SSH et doit être fait dans le fichier ~/.ssh/config /!\**
+
+Host R253
+    HostName X.X.X.X
+    User <Nom Admin>
+    KexAlgorithms diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1
+    HostkeyAlgorithms +ssh-rsa
+    Ciphers aes128-cbc,3des-cbc
+
