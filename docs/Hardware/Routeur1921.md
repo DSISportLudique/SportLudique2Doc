@@ -17,25 +17,27 @@ rommon 2> reset
 
 ## Rappel de configuration 
 Création vlan 150 260-269 200-205 100-105
-WAN: 802.1Q
-	- GE 0/1
-LAN: 802.1Q tout
-	- GE 0/0
-	- ip: 10.5.150.254/24 (.254 pour chaques réseaux)
+WAN: 802.1Q  
+	- GE 0/1  
+LAN: 802.1Q tout    
+	- GE 0/0  
+	- ip: 10.5.150.254/24 (.254 pour chaques réseaux)  
 
 
 ## Configuration
 ### Interface de mana
 ```
-\> conf t
+> conf t
 (config)# interface gi 0/0
 
 (config)# interface gi 0/0.150
 (config)# ip adress 10.5.150.254 255.255.255.0
 (config)# ecapsulation dot1q 150 native
 (config)# no shut
+```
 
 ### Enable password
+```
 enable secret 4 PASSWORD
 ```
 
@@ -59,7 +61,7 @@ enable secret 4 PASSWORD
 ```
 
 ### Configuration du client SSH
-Dans `~/.ssh/config`
+Dans `~/.ssh/config`  
 ```
 Host r1
 	HostName 10.5.150.254
@@ -69,4 +71,4 @@ Host r1
 	HostkeyAlgorithms +ssh-rsa
 	Ciphers aes128-cbc,3des-cbc
 ```
-Connexion par ssh r1
+Connexion par ssh r1  
