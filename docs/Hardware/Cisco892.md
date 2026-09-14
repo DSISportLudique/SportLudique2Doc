@@ -26,17 +26,19 @@ Création du VLAN 150 et insertion du port 7 dans celui-ci
 - hostname BLO-ROU-892
 - username <Nom Admin> privilege 15 secret <password>
 - ip domain name BLO-ROU-892
-- ip ssh version 2
 - crypto key generate rsa general-keys modulus 4096
+- ip ssh version 2
 - line vty 0 4
+- transport input ssh
+- login local
+- exit
 
 *Setup VLANs*
 - Interface g7
+- switchport mode access
+- switchport access vlan 150
 - port-tagging
 - encapsulation dot1q 150
-- set cos 6
 
 - Interface vlan 150
 - ip address X.X.X.X 255.255.255.0
-
-
