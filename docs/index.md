@@ -2,8 +2,8 @@
 
 ## Présentation du projet
 
-Cette documentation permet de décrire l'architecture de Sport Ludique. \
-Les serveurs tournent majoritairement sous Linux. \
+Cette documentation permet de décrire l'architecture de Sport Ludique.  
+Les serveurs tournent majoritairement sous Linux.  
 ```
 PROXMOX (Virtualisation)
 |--Web Server/Auth Portal

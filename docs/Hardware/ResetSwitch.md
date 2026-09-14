@@ -4,7 +4,7 @@
 HP A5500 Stack
 
 ## Reset
-Dans un premier temps, il faut reset le switch (s'il n'est pas neuf)
+Dans un premier temps, il faut reset le switch (s'il n'est pas neuf)  
 
 ```
 > reset saved-configuration 
@@ -24,7 +24,7 @@ delete /unreserved fichier
 ```
 > display irf
 ```
-Il sera affiché: *+X
+Il sera affiché: *+X  
 ```
 > system-view
 ] irf member X renumber 1
