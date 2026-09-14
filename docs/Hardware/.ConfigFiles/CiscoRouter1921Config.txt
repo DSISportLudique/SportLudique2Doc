@@ -1,0 +1,115 @@
+!
+! Last configuration change at 07:52:05 UTC Mon Sep 14 2026
+! NVRAM config last updated at 07:52:06 UTC Mon Sep 14 2026
+! NVRAM config last updated at 07:52:06 UTC Mon Sep 14 2026
+version 15.1
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname BLO-ROU-1921
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 4 miXptzBcZgmkm5.jpzqZgRjCAgSJX8KjEK6O1pjcqHs
+!
+aaa new-model
+!
+!
+!
+!
+!
+!
+!
+aaa session-id common
+!
+no ipv6 cef
+ip source-route
+ip cef
+!         
+!
+!         
+!
+!         
+ip domain name blo-rou-name.lol
+vlan ifdescr detail
+multilink bundle-name authenticated
+!         
+crypto pki token default removal timeout 0
+!         
+!
+license udi pid CISCO1921/K9 sn FGL162323K1
+!
+!         
+username lucas privilege 15 secret 4 dz0thXR6gfqLhARxDVNywJWrOXb47oU1W/db9Xj5EN6
+username enzo privilege 15 secret 4 IuFPlZh07kJimnKv0svQIPxv38PA5GQRuJx6Z7jwcmY
+!
+!         
+ip ssh version 2
+!         
+!
+!         
+!
+interface Embedded-Service-Engine0/0
+ no ip address
+ shutdown 
+!
+interface GigabitEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+!         
+interface GigabitEthernet0/0.150
+ description VLAN150-MANA
+ encapsulation dot1Q 150 native
+ ip address 10.5.150.254 255.255.255.0
+!
+interface GigabitEthernet0/1
+ no ip address
+ shutdown 
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/1.150
+!
+interface Serial0/1/0
+ no ip address
+ shutdown 
+ clock rate 2000000
+!         
+ip forward-protocol nd
+!         
+no ip http server
+no ip http secure-server
+!
+!         
+access-list 23 permit 10.5.150.0 0.0.0.255
+!         
+!
+!         
+!
+!         
+control-plane
+!         
+!
+!         
+line con 0
+line aux 0
+line 2
+ no activation-character
+ no exec
+ transport preferred none
+ transport input all
+ transport output pad telnet rlogin lapb-ta mop udptn v120 ssh
+ stopbits 1
+line vty 0 4
+ access-class 23 in
+ transport input ssh
+line vty 5 15
+ access-class 23 in
+ transport input ssh
+!         
+scheduler allocate 20000 1000
+end   
