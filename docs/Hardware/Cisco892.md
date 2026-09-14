@@ -21,31 +21,31 @@ Création du VLAN 150 et insertion du port 7 dans celui-ci
 **Commandes:**
 
 *Accès SSH*
-```
-- en
-- conf t
-- hostname BLO-ROU-892
-- username <Nom Admin> privilege 15 secret <password>
-- ip domain name BLO-ROU-892
-- crypto key generate rsa general-keys modulus 4096
-- ip ssh version 2
-- line vty 0 4
-- transport input ssh
-- login local
-- exit
-```
+
+- en  
+- conf t  
+- hostname BLO-ROU-892  
+- username <Nom Admin> privilege 15 secret <password>  
+- ip domain name BLO-ROU-892  
+- crypto key generate rsa general-keys modulus 4096  
+- ip ssh version 2  
+- line vty 0 4  
+- transport input ssh  
+- login local  
+- exit  
 
 *Setup VLANs*
-```
-- Interface g7
-- switchport mode access
-- switchport access vlan 150
-- port-tagging
-- encapsulation dot1q 150
 
-- Interface vlan 150
-- ip address X.X.X.X 255.255.255.0
-```
+- Interface g7  
+- switchport mode access    
+- switchport access vlan 150  
+- port-tagging  
+- encapsulation dot1q 150  
+- exit  
+
+- Interface vlan 150  
+- ip address X.X.X.X 255.255.255.0  
+
 ## .ssh/config
 
 **/!\ Cette partie est à faire depuis le client SSH et doit être fait dans le fichier ~/.ssh/config /!\**
