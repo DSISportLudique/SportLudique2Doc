@@ -2,23 +2,23 @@
 
 ## Notations
 Mode normal:
-`>` \
+`>` 
 Mode system:
 `]`
 
 ## Conf voulue
-Avec les 2 switch, on veut le master (switch 1, piorité la plus élevée (32)) et le slave (switch 2, priorité 31) \
-Si nécéssaire, reset les switch et configurer le master
+Avec les 2 switch, on veut le master (switch 1, piorité la plus élevée (32)) et le slave (switch 2, priorité 31)  
+Si nécéssaire, reset les switch et configurer le master  
 
 ## Conf actuelle
 ```
 > sys
 ] display irf
 ```
-Le \*+X indique le nombre actuel
+Le \*+X indique le nombre actuel  
 
 ## Master
-<span style="color:red"> */!\ LES PORTS D'INTERFACES SONT POTENTIELLEMENT À ADAPTER* </span> 
+<span style="color:red"> */!\ LES PORTS D'INTERFACES SONT POTENTIELLEMENT À ADAPTER* </span>  
 ```
 > sys
 ] irf member X renumber 1
@@ -44,7 +44,7 @@ Le \*+X indique le nombre actuel
 ```
 
 ## Slave
-<span style="color:red"> */!\ LES PORTS D'INTERFACES SONT POTENTIELLEMENT À ADAPTER* </span> 
+<span style="color:red"> */!\ LES PORTS D'INTERFACES SONT POTENTIELLEMENT À ADAPTER* </span>   
 ```
 > sys
 ] irf member X renumber 2
