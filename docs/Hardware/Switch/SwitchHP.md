@@ -41,13 +41,37 @@ Interface GigabitEthernet 2/0/6
 - création de la route par défaut  
 
 #### Commandes
+
+(interface réseau interconnexion)
 ```
-interface GigabitEthernet 1/0/2  
+interface GigabitEthernet 2/0/2
 port link-type trunk
-port trunk vlan {vlans ayant besoin de l'accès à internet}
+port trunk permit vlan 105
 exit
 
+interface vlan 105
+ip address 192.168.69.1 255.255.255.0
+
 ip route-static 0.0.0.0 0.0.0.0 192.168.69.254 description default-route
+```
+
+(faites pour notre vlan client)
+```
+vlan 261
+description Clients
+exit
+
+vlan 105
+description FAI1
+
+interface GigabitEthernet 1/0/2  
+port link-type trunk
+port trunk vlan 261
+exit
+
+interface vlan 261
+ip address 172.28.33.254 255.255.255.0
+exit
 ```
 
 ## Management du routeur
