@@ -1,13 +1,11 @@
 # Stack Switch
 
 ## Notations
-Mode normal:
-`>` 
-Mode system:
-`]`
+Mode normal: `>`  
+Mode system: `]`  
 
 ## Conf voulue
-Avec les 2 switch, on veut le master (switch 1, piorité la plus élevée (32)) et le slave (switch 2, priorité 31)  
+Avec les 2 switch, on veut le master (switch 1, piorité la plus élevée (32)) et le slave (switch 2, priorité 31)   
 Si nécéssaire, reset les switch et configurer le master  
 
 ## Conf actuelle
