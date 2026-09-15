@@ -2,14 +2,14 @@
 
 ## Reset le routeur 
 ```
-\> show version
+> show version
 recercher Configuration register is X
 X ici est 0x2101
 reboot le router, au boot: ctrl+pause pour entrer en rommon
 rommon 1> confreg 0x2142
 rommon 2> reset
-\> en
-\# write
+> en
+# write
 reboot le router, au boot: ctrl+pause pour entrer en rommon
 rommon 1> confreg 0x2101
 rommon 2> reset
