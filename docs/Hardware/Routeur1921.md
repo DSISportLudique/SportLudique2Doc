@@ -1,7 +1,6 @@
 # Configuration Routeur Cisco 1921
 
-## Reset le routeur
-```
+## Reset le routeur ```
 \> show version
 recercher Configuration register is X
 X ici est 0x2101
@@ -34,6 +33,20 @@ LAN: 802.1Q tout
 (config)# ip adress 10.5.150.254 255.255.255.0
 (config)# ecapsulation dot1q 150 native
 (config)# no shut
+```
+
+### Interface WAN
+
+#### IP
+L'adresse donnée est 221.87.141.2/30  
+Le seul autre hôte dispo est le 221.87.141.1/30, il sera donc notre ip WAN  
+
+#### Conf
+```
+(config)# interface gi 0/1.105
+0/1.105# ip address 221.87.141.1 255.255.255.252
+0/1.105# encapsulation dot1q 105 native
+0/1.105# no shut
 ```
 
 ### Enable password
