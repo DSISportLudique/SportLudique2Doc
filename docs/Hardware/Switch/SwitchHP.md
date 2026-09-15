@@ -1,34 +1,15 @@
 # Documentation Switch HP A5500
 
 ## Relations ports/vlans  
-### VLAN Management (150)
 
-Interface GigabitEthernet 1/0/30
-Interface GigabitEthernet 1/0/31
-Interface GigabitEthernet 1/0/32
-
-### VLAN Management (150)
-
-Interface GigabitEthernet 1/0/29  
-Interface GigabitEthernet 1/0/30  
-Interface GigabitEthernet 1/0/31  
-Interface GigabitEthernet 1/0/32  
-
-## VLAN INTERCO (269)
-Interface GigabitEthernet 1/0/2  
-Interface GigabitEthernet 1/0/4  
-
-### VLAN FAI1 (105)
-Interface GigabitEthernet 2/0/1  
-Interface GigabitEthernet 2/0/3  
-
-## Ports Switch à Switch (105, 205)
-Interface GigabitEthernet 2/0/2  
-Interface GigabitEthernet 2/0/4  
-
-### VLAN Client (261)
-Interface GigabitEthernet 2/0/5  
-Interface GigabitEthernet 2/0/6  
+| Port | VLAN(s) | Usage |
+|------|---------|-------|
+| Gi 2/0/1, 2/0/3 | tous | Inter-switch |
+| Gi 2/0/2, 2/0/4 | 105 & 205 | WAN routeurs |
+| Gi 1/0/1, 1/0/3 | tous | LAN routeurs |
+| Gi 2/0/5, 2/0/6 | 261 | Clients |
+| Gi 1/0/2, 1/0/4 | 269 | Interco |
+| Gi 1/0/29 à 1/0/32 | 150 | Management |
 
 ## Config
 
