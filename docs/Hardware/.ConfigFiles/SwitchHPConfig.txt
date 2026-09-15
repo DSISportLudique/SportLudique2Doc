@@ -18,9 +18,18 @@ acl number 3000 name SshAccess
 #
 vlan 1
 #
-vlan 150
- description Management
+vlan 105
+ name FAI1
 #
+vlan 150        
+ description Management
+#               
+vlan 261        
+ name Clients   
+#               
+vlan 269        
+ description interco
+#               
 domain system   
  access-limit disable
  state active   
@@ -44,17 +53,28 @@ interface NULL0
 interface Vlan-interface150
  ip address 10.5.150.1 255.255.255.0
 #               
+interface Vlan-interface261
+ ip address 172.28.33.254 255.255.255.0
+#               
+interface Vlan-interface269
+ ip address 192.168.69.1 255.255.255.0
+#               
 interface GigabitEthernet1/0/1
  port link-mode bridge
 #               
 interface GigabitEthernet1/0/2
  port link-mode bridge
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 150 269
+ port trunk pvid vlan 150
 #               
 interface GigabitEthernet1/0/3
  port link-mode bridge
 #               
 interface GigabitEthernet1/0/4
  port link-mode bridge
+ port access vlan 269
 #               
 interface GigabitEthernet1/0/5
  port link-mode bridge
@@ -154,21 +174,31 @@ interface GigabitEthernet1/0/32
 #               
 interface GigabitEthernet2/0/1
  port link-mode bridge
+ port access vlan 105
 #               
 interface GigabitEthernet2/0/2
  port link-mode bridge
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 105 205
 #               
 interface GigabitEthernet2/0/3
  port link-mode bridge
+ port access vlan 105
 #               
 interface GigabitEthernet2/0/4
  port link-mode bridge
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 105 205
 #               
 interface GigabitEthernet2/0/5
  port link-mode bridge
+ port access vlan 261
 #               
 interface GigabitEthernet2/0/6
  port link-mode bridge
+ port access vlan 261
 #               
 interface GigabitEthernet2/0/7
  port link-mode bridge
@@ -266,6 +296,8 @@ interface Ten-GigabitEthernet1/1/1
 #               
 interface Ten-GigabitEthernet2/1/1
 #               
+ ip route-static 0.0.0.0 0.0.0.0 192.168.69.254 description default-route
+#               
  ssh server enable
 #               
  load xml-configuration
@@ -282,4 +314,4 @@ irf-port 1/1
 irf-port 2/2    
  port group interface Ten-GigabitEthernet2/1/1 mode normal
 #               
-return  
+return 

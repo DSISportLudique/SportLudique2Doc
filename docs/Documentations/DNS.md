@@ -1,2 +1,0 @@
-# DNS
-## OS: Alpine

@@ -36,11 +36,9 @@ Création du VLAN 150 et insertion du port 7 dans celui-ci
 
 *Setup VLANs*
 
-- Interface g7  
+- Interface G7  
 - switchport mode access    
 - switchport access vlan 150  
-- port-tagging  
-- encapsulation dot1q 150  
 - exit  
 
 - Interface vlan 150  
@@ -57,3 +55,21 @@ Host R253
     HostkeyAlgorithms +ssh-rsa
     Ciphers aes128-cbc,3des-cbc
 ```
+
+## Config WAN
+
+**VLAN LAN template**
+
+- interface Vlan 261  
+- ip address 172.28.33.253 255.255.255.0  
+- exit  
+
+- interface G 1  
+- switchport mode access  
+- switchport access vlan 261  
+- exit  
+
+**VLAN WAN template**
+
+
+
