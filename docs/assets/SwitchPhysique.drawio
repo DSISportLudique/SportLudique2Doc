@@ -1,29 +1,26 @@
 <mxfile host="app.diagrams.net">
   <diagram name="SwitchPhysique" id="J84iUI7JzqXA6tvwiIAW">
-    <mxGraphModel dx="1408" dy="769" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1388" dy="778" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="NVad2-Gz64kswxn_k_4O-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="" vertex="1">
           <mxGeometry height="110" width="660" x="20" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="NVad2-Gz64kswxn_k_4O-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#E51400,#FF1700);strokeColor=#B20000;fontColor=#ffffff;" value="" vertex="1">
+        <mxCell id="NVad2-Gz64kswxn_k_4O-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#E51400,#FF0000);strokeColor=#B20000;fontColor=#ffffff;" value="" vertex="1">
           <mxGeometry height="30" width="30" x="30" y="60" as="geometry" />
         </mxCell>
         <mxCell id="NVad2-Gz64kswxn_k_4O-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a0522d;fontColor=#ffffff;strokeColor=#6D1F00;" value="" vertex="1">
           <mxGeometry height="30" width="30" x="30" y="100" as="geometry" />
         </mxCell>
-        <mxCell id="NVad2-Gz64kswxn_k_4O-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#FFFFFF,#FF0000);" value="" vertex="1">
+        <mxCell id="NVad2-Gz64kswxn_k_4O-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#E51400,#FF0000);" value="" vertex="1">
           <mxGeometry height="30" width="30" x="70" y="60" as="geometry" />
         </mxCell>
         <mxCell id="NVad2-Gz64kswxn_k_4O-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a0522d;fontColor=#ffffff;strokeColor=#6D1F00;" value="" vertex="1">
           <mxGeometry height="30" width="30" x="70" y="100" as="geometry" />
         </mxCell>
-        <mxCell id="NVad2-Gz64kswxn_k_4O-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#FFFFFF,#0000CC);" value="" vertex="1">
+        <mxCell id="NVad2-Gz64kswxn_k_4O-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#0000FF,#0000FF);" value="" vertex="1">
           <mxGeometry height="30" width="30" x="110" y="60" as="geometry" />
-        </mxCell>
-        <mxCell id="NVad2-Gz64kswxn_k_4O-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#FFFFFF,#0000CC);" value="" vertex="1">
-          <mxGeometry height="30" width="30" x="110" y="100" as="geometry" />
         </mxCell>
         <mxCell id="NVad2-Gz64kswxn_k_4O-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="" vertex="1">
           <mxGeometry height="30" width="30" x="150" y="60" as="geometry" />
@@ -190,20 +187,11 @@
         <mxCell id="NVad2-Gz64kswxn_k_4O-62" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="" vertex="1">
           <mxGeometry height="30" width="30" x="550" y="210" as="geometry" />
         </mxCell>
-        <mxCell id="NVad2-Gz64kswxn_k_4O-63" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#FFFFFF,#00FF00);" value="" vertex="1">
+        <mxCell id="NVad2-Gz64kswxn_k_4O-63" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#00FF00,#00FF00);gradientColor=none;gradientDirection=north;" value="" vertex="1">
           <mxGeometry height="30" width="30" x="590" y="170" as="geometry" />
         </mxCell>
         <mxCell id="NVad2-Gz64kswxn_k_4O-64" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="" vertex="1">
           <mxGeometry height="30" width="30" x="590" y="210" as="geometry" />
-        </mxCell>
-        <mxCell id="NVad2-Gz64kswxn_k_4O-65" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#FFFFFF,#00FF00);" value="" vertex="1">
-          <mxGeometry height="30" width="30" x="630" y="170" as="geometry" />
-        </mxCell>
-        <mxCell id="NVad2-Gz64kswxn_k_4O-66" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#FFFFFF,#00FF00);" value="" vertex="1">
-          <mxGeometry height="30" width="30" x="630" y="210" as="geometry" />
-        </mxCell>
-        <mxCell id="NVad2-Gz64kswxn_k_4O-67" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#FFFFFF,#FF0000);" value="" vertex="1">
-          <mxGeometry height="30" width="30" x="30" y="320" as="geometry" />
         </mxCell>
         <mxCell id="NVad2-Gz64kswxn_k_4O-68" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Ports interswitch (LACP) (trunk VLAN 105 et 205)" vertex="1">
           <mxGeometry height="30" width="305" x="75" y="320" as="geometry" />
@@ -220,17 +208,29 @@
         <mxCell id="NVad2-Gz64kswxn_k_4O-72" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Ports interconnection des routeurs (VLAN 150 et 260-269)" vertex="1">
           <mxGeometry height="30" width="410" x="75" y="400" as="geometry" />
         </mxCell>
-        <mxCell id="NVad2-Gz64kswxn_k_4O-73" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#FFFFFF,#0000CC);" value="" vertex="1">
-          <mxGeometry height="30" width="30" x="30" y="440" as="geometry" />
-        </mxCell>
         <mxCell id="NVad2-Gz64kswxn_k_4O-74" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Ports des clients (vlan 261)" vertex="1">
           <mxGeometry height="30" width="410" x="75" y="440" as="geometry" />
         </mxCell>
-        <mxCell id="NVad2-Gz64kswxn_k_4O-75" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#FFFFFF,#00FF00);" value="" vertex="1">
-          <mxGeometry height="30" width="30" x="30" y="480" as="geometry" />
-        </mxCell>
         <mxCell id="NVad2-Gz64kswxn_k_4O-76" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Ports de management" vertex="1">
           <mxGeometry height="30" width="410" x="75" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="a-4pY9myCpExLYYx5BwK-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#0000FF,#0000FF);" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="110" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="a-4pY9myCpExLYYx5BwK-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#00FF00,#00FF00);gradientColor=none;gradientDirection=north;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="630" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="a-4pY9myCpExLYYx5BwK-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#00FF00,#00FF00);gradientColor=none;gradientDirection=north;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="630" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="a-4pY9myCpExLYYx5BwK-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#00FF00,#00FF00);gradientColor=none;gradientDirection=north;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="30" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="a-4pY9myCpExLYYx5BwK-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#0000FF,#0000FF);" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="30" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="a-4pY9myCpExLYYx5BwK-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#E51400,#FF0000);strokeColor=#B20000;fontColor=#ffffff;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="30" y="320" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
