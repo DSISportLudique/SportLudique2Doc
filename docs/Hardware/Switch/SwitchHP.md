@@ -90,3 +90,14 @@ port trunk pvid vlan 150
 (pvid = tags les frames non-taggés, c'est l'équivalent du VLAN natif
 permet l'accès à l'interface de management du routeur
 Source: https://community.hpe.com/t5/comware-based/dymanic-tagged-vlan-assingment-hp-5500/td-p/6763660)  
+
+## NB
+Le switch n'apparait pas durant un traceroute, afin de changer ça:
+
+```
+system-view
+ip ttl-expires enable
+ip unreachables enable
+quit
+save
+```
