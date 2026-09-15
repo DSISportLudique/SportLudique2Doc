@@ -17,3 +17,6 @@ Les autres vlan auront pour les 10 autres, l'adresse seront `172.28.32.0/19` à 
 
 ![schéma reseau](../assets/infra.drawio.png)
 
+## Schéma Physique routeurs avec FAI
+
+![schéma physique](../assets/SchPhysFAIbase.drawio.png)

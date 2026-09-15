@@ -1,7 +1,7 @@
 !
-! Last configuration change at 07:52:05 UTC Mon Sep 14 2026
-! NVRAM config last updated at 07:52:06 UTC Mon Sep 14 2026
-! NVRAM config last updated at 07:52:06 UTC Mon Sep 14 2026
+! Last configuration change at 07:19:29 UTC Tue Sep 15 2026 by enzo
+! NVRAM config last updated at 07:19:31 UTC Tue Sep 15 2026 by enzo
+! NVRAM config last updated at 07:19:31 UTC Tue Sep 15 2026 by enzo
 version 15.1
 service timestamps debug datetime msec
 service timestamps log datetime msec
@@ -58,21 +58,33 @@ interface Embedded-Service-Engine0/0
 !
 interface GigabitEthernet0/0
  no ip address
+ ip virtual-reassembly in
  duplex auto
  speed auto
-!         
+!
 interface GigabitEthernet0/0.150
  description VLAN150-MANA
  encapsulation dot1Q 150 native
  ip address 10.5.150.254 255.255.255.0
+!         
+interface GigabitEthernet0/0.269
+ description VLAN269-INTERCO
+ encapsulation dot1Q 269
+ ip address 192.168.69.254 255.255.255.0
+ ip nat inside
+ ip virtual-reassembly in
 !
 interface GigabitEthernet0/1
  no ip address
- shutdown 
+ ip virtual-reassembly in
  duplex auto
  speed auto
 !
-interface GigabitEthernet0/1.150
+interface GigabitEthernet0/1.105
+ encapsulation dot1Q 105 native
+ ip address 221.87.141.1 255.255.255.252
+ ip nat outside
+ ip virtual-reassembly in
 !
 interface Serial0/1/0
  no ip address
@@ -84,22 +96,27 @@ ip forward-protocol nd
 no ip http server
 no ip http secure-server
 !
-!         
+ip nat inside source list 10 interface GigabitEthernet0/1.105 overload
+ip route 0.0.0.0 0.0.0.0 221.87.141.2 permanent
+ip route 172.28.32.0 255.255.224.0 192.168.69.1 permanent
+!
+access-list 10 permit 172.28.32.0 0.0.31.255
+access-list 10 permit 192.168.69.0 0.0.0.255
 access-list 23 permit 10.5.150.0 0.0.0.255
-!         
 !
 !         
 !
 !         
+!
 control-plane
-!         
 !
 !         
+!
 line con 0
 line aux 0
-line 2
+line 2    
  no activation-character
- no exec
+ no exec  
  transport preferred none
  transport input all
  transport output pad telnet rlogin lapb-ta mop udptn v120 ssh
@@ -110,6 +127,7 @@ line vty 0 4
 line vty 5 15
  access-class 23 in
  transport input ssh
-!         
+!
 scheduler allocate 20000 1000
-end   
+end
+
