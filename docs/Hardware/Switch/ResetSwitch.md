@@ -1,4 +1,4 @@
-# Switch
+# Reset Switch
 
 ## Switches utilisés
 HP A5500 Stack
@@ -15,12 +15,14 @@ Dans un premier temps, il faut reset le switch (s'il n'est pas neuf)
 ```
 > dir /all 
 ```
-### Supprimer chaque .cfg (si le nom est entouré de [nom], faire `undelete nom` puis le supprimer comme suit) avec cette commande:
+### Supprimer les résidus
+Suppression de chaque .cfg (si le nom est entouré de [nom], faire `undelete nom` puis le supprimer comme suit) avec cette commande:  
 ```
 delete /unreserved fichier
 ```
 
-### S'assurer d'etre le master 1 du stack (car stand alone)
+### Stand alone
+S'assurer d'etre le master 1 du stack (car stand alone)  
 ```
 > display irf
 ```
