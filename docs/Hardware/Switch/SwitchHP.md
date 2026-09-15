@@ -1,19 +1,13 @@
 # Interfaces
 
+Relations ports/vlans  
+
 ## VLAN Management (150)
 
 Interface GigabitEthernet 1/0/29
 Interface GigabitEthernet 1/0/30
 Interface GigabitEthernet 1/0/31
 Interface GigabitEthernet 1/0/32
-
-## Accès Internet
-
-### Depuis le réseau d'InterConnexion
-
-- mise en place du port trunk vers l'interface inside du routeur  
-- trunk comprend le vlan de Management (150) et le vlan d'interconnexion (269)  
-Relations ports/vlans  
 
 ## VLAN Management (150)
 
@@ -38,3 +32,36 @@ Interface GigabitEthernet 2/0/4
 Interface GigabitEthernet 2/0/5  
 Interface GigabitEthernet 2/0/6  
 
+## Accès Internet
+
+#### Logique
+
+- mise en place du port trunk vers l'interface inside du routeur  
+- trunk comprend le vlan d'interconnexion (269) ainsi que les autres vlans utiles  
+- création de la route par défaut  
+
+#### Commandes
+```
+interface GigabitEthernet 1/0/2  
+port link-type trunk
+port trunk vlan {vlans ayant besoin de l'accès à internet}
+exit
+
+ip route-static 0.0.0.0 0.0.0.0 192.168.69.254 description default-route
+```
+
+## Management du routeur
+
+sur l'interface connectée au routeur, j'ajoute le vlan de management au trunk (150)
+
+#### Commandes
+
+```
+interface GigabitEthernet 1/0/2
+port trunk permit vlan 150
+port trunk pvid vlan 150
+```
+
+(pvid = tags les frames non-taggés, c'est l'équivalent du VLAN natif
+permet l'accès à l'interface de management du routeur
+Source: https://community.hpe.com/t5/comware-based/dymanic-tagged-vlan-assingment-hp-5500/td-p/6763660)  
