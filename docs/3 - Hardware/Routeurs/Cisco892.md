@@ -1,7 +1,7 @@
 # Cisco 892 
 
 ## Notations
-Les notations sont définies dans [Notations](../1 - Guidelines/Notations.md)  
+Les notations sont définies dans [Notations](../../1 - Guidelines/Notations.md)  
 
 ## Reset
 

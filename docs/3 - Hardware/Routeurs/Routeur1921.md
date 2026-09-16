@@ -1,7 +1,7 @@
 # Cisco 1921
 
 ## Notations
-Les notations sont définies dans [Notations](../1 - Guidelines/Notations.md)  
+Les notations sont définies dans [Notations](../../1 - Guidelines/Notations.md)  
 
 Avant de commencer a travailler, il faut reset le routeur, repartir sur une base propre
 
