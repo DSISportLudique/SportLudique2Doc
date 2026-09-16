@@ -1,14 +1,15 @@
-# Stack Switch
+# Stack Switch
 
 ## Notations
-Mode normal: `>`  
-Mode system: `]`  
+Dans les parties commandes:
+Mode User: `>`  
+Mode system-view: `]`  
 
-## Conf voulue
+## Conf voulue
 Avec les 2 switch, on veut le master (switch 1, piorité la plus élevée (32)) et le slave (switch 2, priorité 31)   
 Si nécéssaire, reset les switch et configurer le master  
 
-## Conf actuelle
+## Conf actuelle
 ```
 > sys
 ] display irf
