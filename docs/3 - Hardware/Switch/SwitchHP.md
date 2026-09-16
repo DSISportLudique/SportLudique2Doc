@@ -3,12 +3,6 @@
 ## Notations
 Les notations sont définies dans [Notations](../../1 - Guidelines/Notations.md)  
 
-## Notations
-Dans les parties commandes:
-Mode User: `>`
-Mode system-view: `]`
-Mode Interface: `X/X/X]` ou `Vlan X]`
-
 ## Relations ports/vlans  
 
 | Port | VLAN(s) | Usage |
@@ -82,8 +76,7 @@ sur l'interface connectée au routeur, j'ajoute le vlan de management au trunk (
 ```
 
 (pvid = tags les frames non-taggés, c'est l'équivalent du VLAN natif
-permet l'accès à l'interface de management du routeur
-Source: https://community.hpe.com/t5/comware-based/dymanic-tagged-vlan-assingment-hp-5500/td-p/6763660)  
+permet l'accès à l'interface de management du routeur [Source](https://community.hpe.com/t5/comware-based/dymanic-tagged-vlan-assingment-hp-5500/td-p/6763660)
 
 ## NB
 
