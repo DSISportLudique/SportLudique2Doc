@@ -54,3 +54,17 @@ return
 
 save safely force
 ```
+
+## SSH depuis le client
+Le switch est vieux, il ne supporte pas les protocoles récents, il faut donc ajouter par ex, ces lignes dans `~/.ssh/config`:  
+```
+Host sw
+        HostName 10.5.150.1
+        User USER
+        Port 22
+        KexAlgorithms diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1
+        PubkeyAcceptedAlgorithms +ssh-rsa
+        HostkeyAlgorithms +ssh-rsa
+        Ciphers aes128-cbc,3des-cbc
+
+```
