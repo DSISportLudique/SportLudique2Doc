@@ -1,5 +1,8 @@
 # Reset Switch
 
+## Notations
+Les notations sont définies dans [Notations](../1 - Guidelines/Notations.md)  
+
 ## Switches utilisés
 HP A5500 Stack
 

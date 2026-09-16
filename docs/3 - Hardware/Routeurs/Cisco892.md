@@ -1,5 +1,8 @@
 # Cisco 892 
 
+## Notations
+Les notations sont définies dans [Notations](../1 - Guidelines/Notations.md)  
+
 ## Reset
 
 **Pendant la phase de boot, après avoir changer l'état de l'interupteur vers le 1.**  
