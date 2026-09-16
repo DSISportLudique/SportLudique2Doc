@@ -51,7 +51,7 @@ vlan 150#ip address X.X.X.X 255.255.255.0
 
 ## .ssh/config
 
-**/!\ Cette partie est à faire depuis le client SSH et doit être fait dans le fichier ~/.ssh/config /!\ **  
+**Cette partie est à faire depuis le client SSH et doit être fait dans le fichier ~/.ssh/config**  
 ```
 Host R253
     HostName X.X.X.X
