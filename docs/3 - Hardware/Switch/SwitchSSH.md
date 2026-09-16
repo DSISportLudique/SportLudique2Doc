@@ -3,13 +3,6 @@
 ## Notations
 Les notations sont définies dans [Notations](../../1 - Guidelines/Notations.md)  
 
-## Notations
-Dans les parties commandes:
-Mode User: `>`
-Mode system-view: `]`
-Mode Interface: `X/X/X]` ou `Vlan X]`
-Mode Création User: `User]`
-
 ## Création du VLAN de Management (VLAN 150)
 
 *VLAN défini dans le cahier des charges*
@@ -73,7 +66,7 @@ User]quit
 Le switch est vieux, il ne supporte pas les protocoles récents, il faut donc ajouter par ex, ces lignes dans `~/.ssh/config`:  
 ```
 Host sw
-        HostName 10.5.150.1
+        HostName X.X.X.X
         User USER
         Port 22
         KexAlgorithms diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1

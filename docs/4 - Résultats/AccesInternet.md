@@ -6,7 +6,7 @@
 - NAT on sur le routeur 
 
 ### Preuve de résultat:
-Le 1 apparait en * * * car caché par défaut, pour l'afficher, se référer à la config générale
+Le 1 apparait en * * * car caché par défaut, pour l'afficher, se référer à la [config générale](../3 - Hardware/Switch/SwitchHP.md/#nb)
 ``` 
 ~ $ traceroute 1.1.1.1
 traceroute to 1.1.1.1 (1.1.1.1), 30 hops max, 60 byte packets

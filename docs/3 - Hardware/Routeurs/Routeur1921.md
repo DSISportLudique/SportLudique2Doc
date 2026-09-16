@@ -3,6 +3,9 @@
 ## Notations
 Les notations sont définies dans [Notations](../../1 - Guidelines/Notations.md)  
 
+
+## Début
+
 Avant de commencer a travailler, il faut reset le routeur, repartir sur une base propre
 
 ## Reset le routeur 
@@ -28,7 +31,7 @@ WAN: 802.1Q vlans: 105 + 205
     - ip: 221.87.141.1/30  
 LAN: 802.1Q vlans: 150 260-269
 	- GE 0/0  
-	- ip: 10.5.150.254/24 (.254 pour chaques réseaux)  
+	- ip: X.X.X.X/24  
 	- ip: 192.168.69.254/24  
 Routes:  
     - 0.0.0.0/0 -> 221.87.141.2/30  
@@ -46,7 +49,7 @@ Routes:
 (config)# interface gi 0/0
 
 (config)# interface gi 0/0.150
-(config)# ip address 10.5.150.254 255.255.255.0
+(config)# ip address X.X.X.X 255.255.255.0
 (config)# encapsulation dot1q 150 native
 (config)# no shut
 ```
@@ -62,7 +65,7 @@ Routes:
 (config-line)#transport input ssh
 (config-line)#end
 
-(config)#access-list 23 permit 10.5.150.0 0.0.0.255
+(config)#access-list 23 permit X.X.X.X 0.0.0.255
 (config)#line vty 0 15
 (config-line)#transport input ssh
 (config-line)#access-class 23 in
@@ -74,7 +77,7 @@ Routes:
 Dans `~/.ssh/config`  
 ```
 Host r1
-	HostName 10.5.150.254
+	HostName X.X.X.X
 	User USER 
 	Port 22
 	KexAlgorithms diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1
