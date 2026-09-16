@@ -1,5 +1,11 @@
 # Documentation Switch HP A5500
 
+## Notations
+Dans les parties commandes:
+Mode User: `>`
+Mode system-view: `]`
+Mode Interface: `X/X/X]` ou `Vlan X]`
+
 ## Relations ports/vlans  
 
 | Port | VLAN(s) | Usage |
@@ -25,34 +31,37 @@
 
 (interface réseau interconnexion)
 ```
-interface GigabitEthernet 2/0/2
-port link-type trunk
-port trunk permit vlan 105
-exit
+>system-view
+]interface GigabitEthernet 2/0/2
+2/0/2]port link-type trunk
+2/0/2]port trunk permit vlan 105
+2/0/2]quit
 
-interface vlan 105
-ip address 192.168.69.1 255.255.255.0
+>interface vlan 105
+Vlan 105]ip address 192.168.69.1 255.255.255.0
+Vlan 105]quit
 
-ip route-static 0.0.0.0 0.0.0.0 192.168.69.254 description default-route
+]ip route-static 0.0.0.0 0.0.0.0 192.168.69.254 description default-route
 ```
 
 (faites pour notre vlan client)
 ```
-vlan 261
-description Clients
-exit
+]vlan 261
+Vlan 261]description Clients
+Vlan 261]quit
 
-vlan 105
-description FAI1
+]vlan 105
+Vlan 105]description FAI1
+Vlan 105]quit
 
-interface GigabitEthernet 1/0/2  
-port link-type trunk
-port trunk vlan 261
-exit
+1/0/2]interface GigabitEthernet 1/0/2  
+1/0/2]port link-type trunk
+1/0/2]port trunk vlan 261
+1/0/2]quit
 
-interface vlan 261
-ip address 172.28.33.254 255.255.255.0
-exit
+]interface vlan 261
+Vlan 261]ip address 172.28.33.254 255.255.255.0
+Vlan 261]quit
 ```
 
 ## Management du routeur
@@ -62,22 +71,25 @@ sur l'interface connectée au routeur, j'ajoute le vlan de management au trunk (
 #### Commandes
 
 ```
-interface GigabitEthernet 1/0/2
-port trunk permit vlan 150
-port trunk pvid vlan 150
+>system-view
+]interface GigabitEthernet 1/0/2
+1/0/2]port trunk permit vlan 150
+1/0/2]port trunk pvid vlan 150
+1/0/2]quit
 ```
 
 (pvid = tags les frames non-taggés, c'est l'équivalent du VLAN natif
 permet l'accès à l'interface de management du routeur
 Source: https://community.hpe.com/t5/comware-based/dymanic-tagged-vlan-assingment-hp-5500/td-p/6763660)  
 
-## NB
+## NB
+
 Le switch n'apparait pas durant un traceroute, afin de changer ça:
 
 ```
-system-view
-ip ttl-expires enable
-ip unreachables enable
-quit
-save
+>system-view
+]ip ttl-expires enable
+]ip unreachables enable
+]quit
+>save
 ```
