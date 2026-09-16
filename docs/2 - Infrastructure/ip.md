@@ -18,9 +18,6 @@ Exception: vlan 269 qui est dans un autre réseau: 192.168.69.0/24
 
 ![schéma reseau](../assets/infra.drawio.png)
 
-## Schéma Physique routeurs avec FAI
-
-![schéma physique](../assets/SchPhysFAIbase.drawio.png)
 
 ## Schéma du réseau de Management
 
