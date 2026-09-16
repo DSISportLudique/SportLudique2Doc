@@ -1,9 +1,7 @@
 # Stack Switch
 
 ## Notations
-Dans les parties commandes:
-Mode User: `>`  
-Mode system-view: `]`  
+Les notations sont définies dans [Notations](../1 - Guidelines/Notations.md)  
 
 ## Conf voulue
 Avec les 2 switch, on veut le master (switch 1, piorité la plus élevée (32)) et le slave (switch 2, priorité 31)   

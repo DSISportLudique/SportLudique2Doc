@@ -1,6 +1,9 @@
 # SSH Setup Switch HP A5500
 
 ## Notations
+Les notations sont définies dans [Notations](../1 - Guidelines/Notations.md)  
+
+## Notations
 Dans les parties commandes:
 Mode User: `>`
 Mode system-view: `]`
