@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://DSISportLudique.github.io/SportLudique2Doc/3%20-%20Hardware/Routeurs/Routeur1921/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Cisco 1921 - Doc Sport Ludique</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Cisco 1921";
+        var mkdocs_page_input_path = "3 - Hardware/Routeurs/Routeur1921.md";
+        var mkdocs_page_url = "/SportLudique2Doc/3%20-%20Hardware/Routeurs/Routeur1921/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Doc Sport Ludique
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Sport Ludique Documentation</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">1   Guidelines</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../1%20-%20Guidelines/Guidelines/">Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../1%20-%20Guidelines/Notations/">Notations</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">2   Infrastructure</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../2%20-%20Infrastructure/ip/">Adressage IP du site</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../2%20-%20Infrastructure/physique/">Schéma physique</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">3   Hardware</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" >Routeurs</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../Cisco892/">Cisco 892</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Cisco 1921</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#notations">Notations</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#debut">Début</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#reset-le-routeur">Reset le routeur</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#rappel-de-configuration">Rappel de configuration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#configuration">Configuration</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#interface-de-mana">Interface de mana</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#activer-ssh">Activer SSH</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#configuration-du-client-ssh">Configuration du client SSH</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#enable-password">Enable password</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#interface-lan">Interface LAN</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#nat">NAT</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#routes">Routes</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Switch</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Switch/ResetSwitch/">Reset Switch</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Switch/SwitchHP/">Documentation Switch HP A5500</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Switch/SwitchLACP/">Switch LACP (WIP)</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Switch/SwitchSSH/">SSH Setup Switch HP A5500</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Switch/SwitchStack/">Stack Switch</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">4   Résultats</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../4%20-%20R%C3%A9sultats/AccesInternet/">Acces à Internet</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Doc Sport Ludique</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">3   Hardware</li>
+          <li class="breadcrumb-item">Routeurs</li>
+      <li class="breadcrumb-item active">Cisco 1921</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="cisco-1921">Cisco 1921</h1>
+<h2 id="notations">Notations</h2>
+<p>Les notations sont définies dans <a href="../../../1%20-%20Guidelines/Notations/">Notations</a>  </p>
+<h2 id="debut">Début</h2>
+<p>Avant de commencer a travailler, il faut reset le routeur, repartir sur une base propre</p>
+<h2 id="reset-le-routeur">Reset le routeur</h2>
+<pre><code>&gt; show version
+recercher Configuration register is X
+X ici est 0x2101
+reboot le router, au boot: ctrl+pause pour entrer en rommon
+rommon 1&gt; confreg 0x2142
+rommon 2&gt; reset
+&gt; en
+# write
+reboot le router, au boot: ctrl+pause pour entrer en rommon
+rommon 1&gt; confreg 0x2101
+rommon 2&gt; reset
+</code></pre>
+<h2 id="rappel-de-configuration">Rappel de configuration</h2>
+<p>Création des VLANs: 150, 260-269, 205, 105
+WAN: 802.1Q vlans: 105 + 205
+    - GE 0/1<br />
+    - ip: 221.87.141.1/30<br />
+LAN: 802.1Q vlans: 150 260-269
+    - GE 0/0<br />
+    - ip: X.X.X.X/24<br />
+    - ip: 192.168.69.254/24<br />
+Routes:<br />
+    - 0.0.0.0/0 -&gt; 221.87.141.2/30<br />
+    - 172.28.32.0/19 -&gt; 221.87.141.2/30  </p>
+<h2 id="configuration">Configuration</h2>
+<p><em>La premiere etape est le setup de l'interface de management afin de pouvoir administrer notre routeur a distance</em></p>
+<h3 id="interface-de-mana">Interface de mana</h3>
+<pre><code>&gt; conf t
+(config)# interface gi 0/0
+
+(config)# interface gi 0/0.150
+(config)# ip address X.X.X.X 255.255.255.0
+(config)# encapsulation dot1q 150 native
+(config)# no shut
+</code></pre>
+<h3 id="activer-ssh">Activer SSH</h3>
+<pre><code>(config)#ip domain name blo-rou.lol // change this ofc
+(config)#username USER privilege 15 secret PASS
+(config)#ip ssh version 2
+(config)#crypto key generate rsa general-keys modulus 4096
+(config)#line vty 0 4
+(config-line)#transport input ssh
+(config-line)#end
+
+(config)#access-list 23 permit X.X.X.X 0.0.0.255
+(config)#line vty 0 15
+(config-line)#transport input ssh
+(config-line)#access-class 23 in
+(config-line)#exit
+</code></pre>
+<h3 id="configuration-du-client-ssh">Configuration du client SSH</h3>
+<p>Dans <code>~/.ssh/config</code>  </p>
+<pre><code>Host r1
+    HostName X.X.X.X
+    User USER 
+    Port 22
+    KexAlgorithms diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1
+    HostkeyAlgorithms +ssh-rsa
+    Ciphers aes128-cbc,3des-cbc
+</code></pre>
+<p>Connexion par ssh r1  </p>
+<h3 id="enable-password">Enable password</h3>
+<pre><code>enable secret 4 PASSWORD
+
+*L'etape d'apres est de permettre un acces a internet*
+*Donc il faut configurer l'interface qui va vers l'exterieur (WAN) puis celle qui donne sur notre reseau interne (LAN)*
+
+### Interface WAN
+
+#### IP
+L'adresse donnée est 221.87.141.2/30  
+Le seul autre hôte dispo est le 221.87.141.1/30, il sera donc notre ip WAN  
+</code></pre>
+<h4 id="conf">Conf</h4>
+<pre><code>(config)# interface gi 0/1.105
+0/1.105# encapsulation dot1q 105 native
+0/1.105# ip address 221.87.141.1 255.255.255.252
+0/1.105# no shut
+</code></pre>
+<h3 id="interface-lan">Interface LAN</h3>
+<h4 id="ip">IP</h4>
+<p>L'interface LAN du routeur est dans le réseau d'interco (vlan 269, 192.168.69.0/24), sont ip sera 192.168.69.254  </p>
+<h4 id="conf_1">Conf</h4>
+<p>Pour le vlan X:  </p>
+<pre><code>(config)# interface Gi0/0.X
+0/0.X# encapsulation dot1q X
+0/0.X# ip address &lt;ip&gt; &lt;masque&gt;
+0/0.X# no shut
+</code></pre>
+<p>//MSG au lancement d'une console sur le router</p>
+<h3 id="nat">NAT</h3>
+<p>Définir les interfaces de NAT (outside: WAN = Gi0/0.105 (vlan outside); inside: LAN = (Gi0/0.X))  </p>
+<pre><code>(config)# int Gi0/1.105
+0/1.105# ip nat outside 
+0/1.105# exit 
+(config)# int Gi0/0.x
+0/0.x# ip nat inside
+0/0.x# exit
+(config)# access-list 10 permit 192.168.69.0 0.0.0.255
+(config)# access-list 10 permit 172.28.32.0 0.0.31.255
+(config)# ip nat inside source list 10 interface Gi 0/1.105 overload
+</code></pre>
+<h3 id="routes">Routes</h3>
+<p>La passerelle par défaut est, comme définie plus haut, 221.87.141.2/30</p>
+<pre><code>ip route 0.0.0.0 0.0.0.0 221.87.141.2 permanent
+</code></pre>
+<p>La route suivante est nécessaire pour router les vlans</p>
+<pre><code>ip route 172.28.32.0 255.255.224.0 192.168.69.1 permanent
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Cisco892/" class="btn btn-neutral float-left" title="Cisco 892"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../Switch/ResetSwitch/" class="btn btn-neutral float-right" title="Reset Switch">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../Cisco892/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../Switch/ResetSwitch/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
