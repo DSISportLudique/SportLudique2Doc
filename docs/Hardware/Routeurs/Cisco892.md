@@ -2,53 +2,56 @@
 
 ## Reset
 
-**Pendant la phase de boot, après avoir changer l'état de l'interupteur vers le 1.**
-**Maintenir presser le bouton "Reset" à côté de l'interupteur.**
+**Pendant la phase de boot, après avoir changer l'état de l'interupteur vers le 1.**  
+**Maintenir presser le bouton "Reset" à côté de l'interupteur.**  
 
-Il suffit d'attendre jusqu'à ce que le routeur engage ce qu'il appelle "System Configuration Dialog"
-Entrer "no" quand demandé. Puis le routeur sera complètement reset.
+Il suffit d'attendre jusqu'à ce que le routeur engage ce qu'il appelle "System Configuration Dialog"  
+Entrer "no" quand demandé. Puis le routeur sera complètement reset.  
 
 ## Out of the box config
 
-ports 0-7: Gigabit LAN
-port 8 et 9: Gigabit WAN
+ports 0-7: Gigabit LAN  
+port 8 et 9: Gigabit WAN  
 
 ## Setup
 
-Création du VLAN 150 et insertion du port 7 dans celui-ci
-*VLAN 150 = VLAN de Management*
+Création du VLAN 150 et insertion du port 7 dans celui-ci  
+*VLAN 150 = VLAN de Management*  
 
 **Commandes:**
 
-*Accès SSH*
+*Accès SSH*  
 
-- en  
-- conf t  
-- hostname BLO-ROU-892  
-- username <Nom Admin> privilege 15 secret <password>  
-- ip domain name BLO-ROU-892  
-- crypto key generate rsa general-keys modulus 4096  
-- ip ssh version 2  
-- line vty 0 4  
-- transport input ssh  
-- login local  
-- exit  
+```
+>en  
+#conf t  
+(config)#hostname BLO-ROU-892  
+(config)#username <Nom Admin> privilege 15 secret <password>  
+(config)#ip domain name BLO-ROU-892  
+(config)#crypto key generate rsa general-keys modulus 4096  
+(config)#ip ssh version 2  
+(config)#line vty 0 4  
+(config)#transport input ssh  
+(config)#login local  
+```
 
-*Setup VLANs*
+*Setup VLANs*  
 
-- Interface g7  
-- switchport mode access    
-- switchport access vlan 150  
-- port-tagging  
-- encapsulation dot1q 150  
-- exit  
+```
+(config)#interface g7  
+7#switchport mode access    
+7#switchport access vlan 150  
+7#port-tagging  
+7#encapsulation dot1q 150  
+7#exit  
 
-- Interface vlan 150  
-- ip address X.X.X.X 255.255.255.0  
+(config)#interface vlan 150  
+vlan 150#ip address X.X.X.X 255.255.255.0  
+```
 
 ## .ssh/config
 
-**/!\ Cette partie est à faire depuis le client SSH et doit être fait dans le fichier ~/.ssh/config /!\ **
+**/!\ Cette partie est à faire depuis le client SSH et doit être fait dans le fichier ~/.ssh/config /!\ **  
 ```
 Host R253
     HostName X.X.X.X
