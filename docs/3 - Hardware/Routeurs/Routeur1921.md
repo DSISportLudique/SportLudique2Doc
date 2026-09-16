@@ -22,17 +22,17 @@ rommon 2> reset
 
 ## Rappel de configuration 
 
-Création vlan 150 260-269 200-205 100-105
+Création des VLANs: 150, 260-269, 205, 105
 WAN: 802.1Q vlans: 105 + 205
 	- GE 0/1  
-    - ip: 221.87.141.1/30
-LAN: 802.1Q vlans: tout -105 -205   
+    - ip: 221.87.141.1/30  
+LAN: 802.1Q vlans: 150 260-269
 	- GE 0/0  
 	- ip: 10.5.150.254/24 (.254 pour chaques réseaux)  
 	- ip: 192.168.69.254/24  
 Routes:  
     - 0.0.0.0/0 -> 221.87.141.2/30  
-    - 172.28.32.0/19 -> 221.87.141.2/30
+    - 172.28.32.0/19 -> 221.87.141.2/30  
 
 
 ## Configuration
