@@ -48,7 +48,7 @@ Création du VLAN 150 et insertion du port 7 dans celui-ci
 
 ## .ssh/config
 
-**/!\ Cette partie est à faire depuis le client SSH et doit être fait dans le fichier ~/.ssh/config /!\**
+**/!\ Cette partie est à faire depuis le client SSH et doit être fait dans le fichier ~/.ssh/config /!\ **
 ```
 Host R253
     HostName X.X.X.X
