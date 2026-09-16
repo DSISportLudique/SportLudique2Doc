@@ -10,7 +10,7 @@ Ils sont implémentés de la sorte:
 
 ## Commandes
 ### Comment
-Les commandes sont mises soit entre `\`` pour les commandes uniques, soit entre `\`\`\`` pour les blocs  
+Les commandes sont mises soit entre  `` ` `` pour les commandes uniques, soit entre `` ``` `` pour les blocs  
 
 ### Notations
 Les notations sont définies dans un fichier: docs/Général/Notations.md dont un lien est fait en début de page utilisant des notations nécessaires (par ex les notations `>` et `]`)  
