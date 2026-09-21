@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="SwitchPhysique" id="J84iUI7JzqXA6tvwiIAW">
-    <mxGraphModel dx="1388" dy="778" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="687" dy="769" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -193,8 +193,8 @@
         <mxCell id="NVad2-Gz64kswxn_k_4O-64" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="" vertex="1">
           <mxGeometry height="30" width="30" x="590" y="210" as="geometry" />
         </mxCell>
-        <mxCell id="NVad2-Gz64kswxn_k_4O-68" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Ports interswitch (LACP) (trunk VLAN 105 et 205)" vertex="1">
-          <mxGeometry height="30" width="305" x="75" y="320" as="geometry" />
+        <mxCell id="NVad2-Gz64kswxn_k_4O-68" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Ports interswitch (LACP) (trunk VLAN 105, 205, 150 et 269)" vertex="1">
+          <mxGeometry height="30" width="370" x="75" y="320" as="geometry" />
         </mxCell>
         <mxCell id="NVad2-Gz64kswxn_k_4O-69" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a0522d;fontColor=#ffffff;strokeColor=#6D1F00;" value="" vertex="1">
           <mxGeometry height="30" width="30" x="30" y="360" as="geometry" />
