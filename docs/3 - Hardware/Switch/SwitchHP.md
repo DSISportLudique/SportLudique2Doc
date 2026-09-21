@@ -8,7 +8,7 @@ Les notations sont définies dans [Notations](../../1 - Guidelines/Notations.md)
 | Port | VLAN(s) | Usage |
 |------|---------|-------|
 | Gi 2/0/1, 2/0/3 | tous | Inter-switch |
-| Gi 2/0/2, 2/0/4 | 105 & 205 | WAN routeurs |
+| Gi 2/0/2, 2/0/4 | 105 & 205 & 150 & 262 | WAN routeurs, Mana vers Proxmox et VLAN Serveurs pour Proxmox |
 | Gi 1/0/1, 1/0/3 | tous | LAN routeurs |
 | Gi 2/0/5, 2/0/6 | 261 | Clients |
 | Gi 1/0/2, 1/0/4 | 269 | Interco |
@@ -31,12 +31,23 @@ Les notations sont définies dans [Notations](../../1 - Guidelines/Notations.md)
 >system-view
 ]interface GigabitEthernet 2/0/2
 2/0/2]port link-type trunk
-2/0/2]port trunk permit vlan 105
-2/0/2]quit
+2/0/2]port trunk permit vlan 105 205 150 262
 
->interface vlan 105
-Vlan 105]ip address 192.168.69.1 255.255.255.0
-Vlan 105]quit
+]interface vlan 269
+Vlan 269]ip address 192.168.69.1 255.255.255.0
+Vlan 269]quit
+
+]interface vlan 150
+Vlan 150]ip address 10.5.150.1 255.255.255.0
+Vlan 150]quit
+
+]interface vlan 261
+Vlan 261]ip address 172.28.33.254 255.255.255.0
+Vlan 261]quit
+
+]interface vlan 262
+Vlan 262]ip address 172.28.34.254 255.255.255.0
+Vlan 262]quit
 
 ]ip route-static 0.0.0.0 0.0.0.0 192.168.69.254 description default-route
 ```
@@ -47,13 +58,21 @@ Vlan 105]quit
 Vlan 261]description Clients
 Vlan 261]quit
 
-]vlan 105
-Vlan 105]description FAI1
-Vlan 105]quit
+]vlan 269
+Vlan 269]description interconnexion
+Vlan 269]quit
+
+]vlan 262
+Vlan 262]description Serveurs
+Vlan 262]quit
+
+]vlan 150
+Vlan 150]description Management
+Vlan 150]quit
 
 1/0/2]interface GigabitEthernet 1/0/2  
 1/0/2]port link-type trunk
-1/0/2]port trunk vlan 261
+1/0/2]port trunk vlan 269
 1/0/2]quit
 
 ]interface vlan 261
@@ -63,15 +82,14 @@ Vlan 261]quit
 
 ## Management du routeur
 
-sur l'interface connectée au routeur, j'ajoute le vlan de management au trunk (150)
+sur l'interface connectée au routeur, j'ajoute le vlan de management au trunk (150) et le vlan d'interconnexion
 
 #### Commandes
 
 ```
 >system-view
 ]interface GigabitEthernet 1/0/2
-1/0/2]port trunk permit vlan 150
-1/0/2]port trunk pvid vlan 150
+1/0/2]port trunk permit vlan 150 269
 1/0/2]quit
 ```
 
