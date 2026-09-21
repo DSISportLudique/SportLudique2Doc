@@ -27,6 +27,9 @@ vlan 150
 vlan 261        
  name Clients   
 #               
+vlan 262        
+ description Serveurs
+#               
 vlan 269        
  description interco
 #               
@@ -56,6 +59,9 @@ interface Vlan-interface150
 interface Vlan-interface261
  ip address 172.28.33.254 255.255.255.0
 #               
+interface Vlan-interface262
+ ip address 172.28.34.254 255.255.255.0
+#               
 interface Vlan-interface269
  ip address 192.168.69.1 255.255.255.0
 #               
@@ -67,7 +73,6 @@ interface GigabitEthernet1/0/2
  port link-type trunk
  undo port trunk permit vlan 1
  port trunk permit vlan 150 269
- port trunk pvid vlan 150
 #               
 interface GigabitEthernet1/0/3
  port link-mode bridge
@@ -180,7 +185,7 @@ interface GigabitEthernet2/0/2
  port link-mode bridge
  port link-type trunk
  undo port trunk permit vlan 1
- port trunk permit vlan 105 205
+ port trunk permit vlan 105 150 205 262
 #               
 interface GigabitEthernet2/0/3
  port link-mode bridge
@@ -190,7 +195,7 @@ interface GigabitEthernet2/0/4
  port link-mode bridge
  port link-type trunk
  undo port trunk permit vlan 1
- port trunk permit vlan 105 205
+ port trunk permit vlan 105 150 205 262
 #               
 interface GigabitEthernet2/0/5
  port link-mode bridge
