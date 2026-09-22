@@ -1,0 +1,21 @@
+# WIN MANA
+
+Ce serveur est le seul serveur en GUI, il sert à administrer les autres serveurs Windows  
+
+## Réseau
+Ce serveur a plusieurs IP, une dans le réseau serveurs (`172.28.34.51`) et une dans le réseau de management (`10.5.150.51`)  
+
+
+## Config générale
+
+### NOM
+Le nom se change comme suit:  
+Paramètres -> à propos de -> renommer -> BLO-WIN-GUI
+
+### RDP
+Paramètres -> Paramètres de Bureau à distance -> Activer
+
+## Gestion
+Il faut maintenant ajouter l'AD pour le gérer, sur le dashboard:  
+Ajouter d'autres serveurs à gérer > Rechercher maintenant > BLO-AD
+
