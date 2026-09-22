@@ -1,7 +1,7 @@
 !
-! Last configuration change at 07:19:29 UTC Tue Sep 15 2026 by enzo
-! NVRAM config last updated at 07:19:31 UTC Tue Sep 15 2026 by enzo
-! NVRAM config last updated at 07:19:31 UTC Tue Sep 15 2026 by enzo
+! Last configuration change at 08:25:54 UTC Tue Sep 22 2026 by enzo
+! NVRAM config last updated at 08:26:05 UTC Tue Sep 22 2026 by enzo
+! NVRAM config last updated at 08:26:05 UTC Tue Sep 22 2026 by enzo
 version 15.1
 service timestamps debug datetime msec
 service timestamps log datetime msec
@@ -27,34 +27,34 @@ aaa session-id common
 !
 no ipv6 cef
 ip source-route
-ip cef
-!         
+ip cef    
 !
-!         
 !
-!         
+!
+!
+!
 ip domain name blo-rou-name.lol
 vlan ifdescr detail
 multilink bundle-name authenticated
-!         
+!
 crypto pki token default removal timeout 0
-!         
+!
 !
 license udi pid CISCO1921/K9 sn FGL162323K1
 !
-!         
+!
 username lucas privilege 15 secret 4 dz0thXR6gfqLhARxDVNywJWrOXb47oU1W/db9Xj5EN6
 username enzo privilege 15 secret 4 IuFPlZh07kJimnKv0svQIPxv38PA5GQRuJx6Z7jwcmY
 !
-!         
-ip ssh version 2
-!         
 !
-!         
+ip ssh version 2
+!
+!
+!
 !
 interface Embedded-Service-Engine0/0
  no ip address
- shutdown 
+ shutdown
 !
 interface GigabitEthernet0/0
  no ip address
@@ -62,17 +62,27 @@ interface GigabitEthernet0/0
  duplex auto
  speed auto
 !
+interface GigabitEthernet0/0.105
+!
 interface GigabitEthernet0/0.150
  description VLAN150-MANA
- encapsulation dot1Q 150 native
- ip address 10.5.150.254 255.255.255.0
-!         
+ encapsulation dot1Q 150
+ ip address 10.5.150.253 255.255.255.0
+ ip nat inside
+ ip virtual-reassembly in
+ standby 1 ip 10.5.150.254
+ standby 1 priority 150
+ standby 1 preempt
+!
 interface GigabitEthernet0/0.269
  description VLAN269-INTERCO
  encapsulation dot1Q 269
- ip address 192.168.69.254 255.255.255.0
+ ip address 192.168.69.253 255.255.255.0
  ip nat inside
  ip virtual-reassembly in
+ standby 1 ip 192.168.69.254
+ standby 1 priority 150
+ standby 1 preempt
 !
 interface GigabitEthernet0/1
  no ip address
@@ -88,11 +98,11 @@ interface GigabitEthernet0/1.105
 !
 interface Serial0/1/0
  no ip address
- shutdown 
+ shutdown
  clock rate 2000000
-!         
+!
 ip forward-protocol nd
-!         
+!
 no ip http server
 no ip http secure-server
 !
@@ -102,21 +112,22 @@ ip route 172.28.32.0 255.255.224.0 192.168.69.1 permanent
 !
 access-list 10 permit 172.28.32.0 0.0.31.255
 access-list 10 permit 192.168.69.0 0.0.0.255
+access-list 10 permit 10.5.150.0 0.0.0.255
 access-list 23 permit 10.5.150.0 0.0.0.255
-!
 !         
 !
-!         
+!
+!
 !
 control-plane
 !
-!         
+!
 !
 line con 0
 line aux 0
-line 2    
+line 2
  no activation-character
- no exec  
+ no exec
  transport preferred none
  transport input all
  transport output pad telnet rlogin lapb-ta mop udptn v120 ssh
