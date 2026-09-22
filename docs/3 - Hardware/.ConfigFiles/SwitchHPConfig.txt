@@ -24,6 +24,9 @@ vlan 105
 vlan 150        
  description Management
 #               
+vlan 205        
+ description FAI2
+#               
 vlan 261        
  name Clients   
 #               
@@ -50,6 +53,12 @@ local-user M3Lucas
  password cipher $c$3$J2cNN/eO6Kj09GlVLtYNitBxHJFmuqKmF3u0VALXkZpFDg==
  authorization-attribute level 3
  service-type ssh
+#               
+interface Bridge-Aggregation1
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 105 150 205 262
+ link-aggregation mode dynamic
 #               
 interface NULL0 
 #               
@@ -79,7 +88,9 @@ interface GigabitEthernet1/0/3
 #               
 interface GigabitEthernet1/0/4
  port link-mode bridge
- port access vlan 269
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 150 269
 #               
 interface GigabitEthernet1/0/5
  port link-mode bridge
@@ -186,16 +197,18 @@ interface GigabitEthernet2/0/2
  port link-type trunk
  undo port trunk permit vlan 1
  port trunk permit vlan 105 150 205 262
+ port link-aggregation group 1
 #               
 interface GigabitEthernet2/0/3
  port link-mode bridge
- port access vlan 105
+ port access vlan 205
 #               
 interface GigabitEthernet2/0/4
  port link-mode bridge
  port link-type trunk
  undo port trunk permit vlan 1
  port trunk permit vlan 105 150 205 262
+ port link-aggregation group 1
 #               
 interface GigabitEthernet2/0/5
  port link-mode bridge
@@ -319,4 +332,4 @@ irf-port 1/1
 irf-port 2/2    
  port group interface Ten-GigabitEthernet2/1/1 mode normal
 #               
-return 
+return    
