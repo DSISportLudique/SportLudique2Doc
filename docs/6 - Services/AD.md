@@ -2,10 +2,15 @@
 
 L'AD sera hébergé sur un serveur Windows Core  et servira aussi de DC  
 
+## Réseau
+L'AD n'a qu'une interface réseau, dans le réseau serveur, sont IP est dans notre cas: `172.28.34.50`  
+
 ## DC
 Pour servir de DC il faut installer la feature de domaines:
 `Install-WindowsFeature -name AD-Domain-Services -IncludeManagementTools`  
 
 Il faut ensuite créer une forêt, notre domaine est `blois.sportludique.fr`:  
 `Install-ADDSForest -DomainName "blois.sportludique.fr"`
+
+Son nom doit aussi être BLO-AD
 
