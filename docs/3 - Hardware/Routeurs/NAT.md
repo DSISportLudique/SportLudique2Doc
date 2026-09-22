@@ -1,5 +1,8 @@
 # NAT
 
+## Notations
+Les notations sont définies dans [Notations](../../1 - Guidelines/Notations.md)  
+
 ## Routeur Cisco 1921
 
 Définir les interfaces de NAT (outside: WAN = Gi0/0.105 (vlan outside); inside: LAN = (Gi0/0.X))  

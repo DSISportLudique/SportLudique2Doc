@@ -7,12 +7,11 @@ Les notations sont définies dans [Notations](../../1 - Guidelines/Notations.md)
 
 | Port | VLAN(s) | Usage |
 |------|---------|-------|
-| Gi 2/0/1, 2/0/3 | tous | Inter-switch |
-| Gi 2/0/2, 2/0/4 | 105 & 205 & 150 & 262 | WAN routeurs, Mana vers Proxmox et VLAN Serveurs pour Proxmox |
-| Gi 1/0/1, 1/0/3 | tous | LAN routeurs |
-| Gi 2/0/5, 2/0/6 | 261 | Clients |
-| Gi 1/0/2, 1/0/4 | 269 | Interco |
-| Gi 1/0/29 à 1/0/32 | 150 | Management |
+| Gi 2/0/1, 1/0/2 | tous | Inter-switch |
+| Gi 2/0/3, 1/0/4 | 105 & 205 & 150 & 262 | WAN routeurs, Mana vers Proxmox et VLAN Serveurs pour Proxmox |
+| Gi 2/0/7, 1/0/8 | 261 | Clients |
+| Gi 2/0/5, 2/0/6 | 269 | Interco |
+| Gi 1/0/30 à 1/0/32 | 150 | Management |
 
 ## Config
 
@@ -29,10 +28,6 @@ Les notations sont définies dans [Notations](../../1 - Guidelines/Notations.md)
 (interface réseau interconnexion)
 ```
 >system-view
-]interface GigabitEthernet 2/0/2
-2/0/2]port link-type trunk
-2/0/2]port trunk permit vlan 105 205 150 262
-
 ]interface vlan 269
 Vlan 269]ip address 192.168.69.1 255.255.255.0
 Vlan 269]quit

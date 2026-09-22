@@ -1,5 +1,8 @@
 # HSRP
 
+## Notations
+Les notations sont définies dans [Notations](../../1 - Guidelines/Notations.md)  
+
 ## But
 Gestion du *Fail-over*, empêche le SPOF de la passerelle unique (Single Point Of Failure) 
 
