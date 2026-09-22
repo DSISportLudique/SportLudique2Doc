@@ -71,3 +71,6 @@ Citation: 'Cisco IOS IP Base—Cisco IP SLA responder is included in the IP Base
 (config-if)#end
 ```
 
+Résultats visibles dans Wireshark:
+
+![](../../assets/'HSRP reprise de travail.png')
