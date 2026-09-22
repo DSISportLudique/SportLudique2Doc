@@ -1,5 +1,8 @@
 # Setup Port mirroring Switch HP
 
+## Notations
+Les notations sont définies dans [Notations](../../1 - Guidelines/Notations.md)  
+
 ## Définition
 
 Le port mirroring permet de copier le traffic d'un ou plusieurs ports d'un Switch vers un autre port pour analyse des trames du réseau sans interruption.
