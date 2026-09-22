@@ -1,3 +1,6 @@
+!
+! Last configuration change at 09:24:55 UTC Tue Sep 22 2026 by Enzo
+!
 version 15.5
 service timestamps debug datetime msec
 service timestamps log datetime msec
@@ -24,144 +27,191 @@ aaa session-id common
 ethernet lmi ce
 !
 !
-!         
-!         
-!         
-!         
-!         
-!         
-!         
-!         
-!         
-!         
-!         
-!         
-!         
-!         
-!         
-          
-          
-!         
-!         
-!         
-!         
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+
+!
+!
+!
+!
 ip domain name BLO-ROU-892
-ip cef    
+ip cef
 no ipv6 cef
+!
 !         
-!         
-!         
-!         
-!         
+!
+!
+!
 multilink bundle-name authenticated
-!         
-!         
-!         
-!         
-!         
-!         
-!         
+!
+!
+!
+!
+!
+!
+!
 license udi pid C892FSP-K9 sn FCZ203191WN
-!         
-!         
+!
+!
 username Enzo privilege 15 secret 5 $1$KXtT$11rR1mWYrXFbVXIuSor7U1
 username Lucas privilege 15 secret 5 $1$97bD$ObazUOt8nHPHU8b8Th6ZI1
+!
+!
+!
+!
+!
+track 1 ip sla 1 reachability
+!
+! 
+!
+!
+!
 !         
-!         
-!         
-!         
-!         
-!         
-!         
-!         
-!         
-!         
-!         
-!         
-!         
-!         
-!         
-!         
+!
+!
+!
+!
+!
+!
 interface GigabitEthernet0
  no ip address
-!         
+!
 interface GigabitEthernet1
+ switchport access vlan 261
  no ip address
-!         
+!
 interface GigabitEthernet2
+ switchport access vlan 262
  no ip address
-!         
+!
 interface GigabitEthernet3
  no ip address
-!         
+!
 interface GigabitEthernet4
  no ip address
-!         
+!
 interface GigabitEthernet5
  no ip address
-!         
+!
 interface GigabitEthernet6
  no ip address
-!         
+!
 interface GigabitEthernet7
  switchport access vlan 150
  no ip address
- port-tagging
-  encapsulation dot1q 150
-  exit    
-!         
+!
 interface GigabitEthernet8
+ description LAN
  no ip address
- shutdown 
  duplex auto
  speed auto
-!         
+!
+interface GigabitEthernet8.150
+ description LANMANA
+ encapsulation dot1Q 150
+ ip address 10.5.150.252 255.255.255.0
+ ip nat inside
+ ip virtual-reassembly in
+ standby 1 ip 10.5.150.254
+ standby 1 priority 160
+ standby 1 preempt
+ standby 1 track 1 decrement 20
+!
+interface GigabitEthernet8.269
+ description LAN
+ encapsulation dot1Q 269
+ ip address 192.168.69.252 255.255.255.0
+ ip nat inside
+ ip virtual-reassembly in
+ standby 1 ip 192.168.69.254
+ standby 1 priority 160
+ standby 1 preempt
+ standby 1 track 1 decrement 20
+!
 interface GigabitEthernet9
- no ip address
- shutdown 
+ description WAN
+ ip address 183.44.41.2 255.255.255.252
+ ip nat outside
+ ip virtual-reassembly in
  duplex auto
  speed auto
-!         
+!
 interface Vlan1
  no ip address
-!         
+!
 interface Vlan150
- ip address 10.5.150.253 255.255.255.0
-!         
+ no ip address
+!
+interface Vlan260
+ no ip address
+!
+interface Vlan261
+ description VLAN Client
+ ip address 172.28.33.253 255.255.255.0
+!
+interface Vlan262
+ description VLAN Serveur
+ ip address 172.28.34.253 255.255.255.0
+!
 ip forward-protocol nd
 no ip http server
 no ip http secure-server
-!         
-!         
+!
+!
+ip nat inside source list 10 interface GigabitEthernet9 overload
+ip route 0.0.0.0 0.0.0.0 183.44.41.1
+ip route 172.28.32.0 255.255.224.0 192.168.69.1 permanent
 ip ssh version 2
-!         
-!         
-!         
-!         
-!         
+!
+ip sla 1
+ icmp-echo 183.44.41.1 source-interface GigabitEthernet9
+ frequency 5
+ip sla schedule 1 life forever start-time now
+!
+access-list 10 permit 172.28.32.0 0.0.31.255
+access-list 10 permit 10.5.150.0 0.0.0.255
+access-list 10 permit 192.168.69.0 0.0.0.255
+!
+!
+!
 control-plane
-!         
-!         
-!         
+!
+!
+!
 mgcp behavior rsip-range tgcp-only
 mgcp behavior comedia-role none
 mgcp behavior comedia-check-media-src disable
 mgcp behavior comedia-sdp-force disable
-!         
+!
 mgcp profile default
-!         
-!         
-!         
-!         
-!         
-!         
-!         
+!
+!
+!
+!
+!
+!
+!
 line con 0
  no modem enable
 line aux 0
 line vty 0 4
  transport input ssh
-!         
+!
 scheduler allocate 20000 1000
-!         
+!
 end
+
