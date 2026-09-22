@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="SwitchPhysique" id="ypLLO6ilAueRc4mbySTh">
-    <mxGraphModel dx="410" dy="169" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="410" dy="477" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -14,7 +14,7 @@
           <mxGeometry height="30" width="30" x="443" y="376" as="geometry" />
         </mxCell>
         <mxCell id="MoCDh0baYih2J27h80_q-82" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#0000FF,#0000FF);" value="" vertex="1">
-          <mxGeometry height="30" width="30" x="523" y="376" as="geometry" />
+          <mxGeometry height="30" width="30" x="803" y="376" as="geometry" />
         </mxCell>
         <mxCell id="MoCDh0baYih2J27h80_q-83" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="" vertex="1">
           <mxGeometry height="30" width="30" x="523" y="336" as="geometry" />
@@ -62,7 +62,7 @@
           <mxGeometry height="30" width="30" x="803" y="336" as="geometry" />
         </mxCell>
         <mxCell id="MoCDh0baYih2J27h80_q-98" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="" vertex="1">
-          <mxGeometry height="30" width="30" x="803" y="376" as="geometry" />
+          <mxGeometry height="30" width="30" x="523" y="376" as="geometry" />
         </mxCell>
         <mxCell id="MoCDh0baYih2J27h80_q-99" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="" vertex="1">
           <mxGeometry height="30" width="30" x="843" y="336" as="geometry" />
@@ -152,7 +152,7 @@
           <mxGeometry height="30" width="30" x="763" y="486" as="geometry" />
         </mxCell>
         <mxCell id="MoCDh0baYih2J27h80_q-130" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="" vertex="1">
-          <mxGeometry height="30" width="30" x="803" y="446" as="geometry" />
+          <mxGeometry height="30" width="30" x="523" y="446" as="geometry" />
         </mxCell>
         <mxCell id="MoCDh0baYih2J27h80_q-131" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="" vertex="1">
           <mxGeometry height="30" width="30" x="803" y="486" as="geometry" />
@@ -203,7 +203,7 @@
           <mxGeometry height="30" width="410" x="448" y="756" as="geometry" />
         </mxCell>
         <mxCell id="MoCDh0baYih2J27h80_q-147" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#0000FF,#0000FF);" value="" vertex="1">
-          <mxGeometry height="30" width="30" x="523" y="446" as="geometry" />
+          <mxGeometry height="30" width="30" x="803" y="446" as="geometry" />
         </mxCell>
         <mxCell id="MoCDh0baYih2J27h80_q-148" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#00FF00,#00FF00);gradientColor=none;gradientDirection=north;" value="" vertex="1">
           <mxGeometry height="30" width="30" x="1003" y="446" as="geometry" />
