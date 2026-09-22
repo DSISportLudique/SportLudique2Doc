@@ -9,7 +9,7 @@ Les notations sont définies dans [Notations](../../1 - Guidelines/Notations.md)
 |------|---------|-------|
 | Gi 2/0/1, 1/0/2 | tous | Inter-switch |
 | Gi 2/0/3, 1/0/4 | 105 & 205 & 150 & 262 | WAN routeurs, Mana vers Proxmox et VLAN Serveurs pour Proxmox |
-| Gi 2/0/7, 1/0/8 | 261 | Clients |
+| Gi 2/0/25, 1/0/26 | 261 | Clients |
 | Gi 2/0/5, 2/0/6 | 269 | Interco |
 | Gi 1/0/30 à 1/0/32 | 150 | Management |
 
