@@ -1,6 +1,6 @@
-# AD 
+# AD 
 
-L'AD sera hébergé sur un serveur Windows Core  et servira aussi de DC  
+L'AD sera hébergé sur un serveur Windows Core 2025 et servira aussi de DC  
 
 ## Drivers
 
@@ -8,7 +8,8 @@ Ajouter un disque avec l'image des drivers
 Dans PowerShell (15):
 Récupérer le nom du disque contenant les drivers
 `Get-WmiObject -Class Win32_CDROMDrive`
-Exécuter le .msi x64 **Finir et modifier pour propreté**
+Exécuter {DVD}:\virtio-win-gt-x64.msi
+Installer Viomem (driver pour meilleure gestion de la mémoire)
 
 ## Réseau
 L'AD n'a qu'une interface réseau, dans le réseau serveur, sont IP est dans notre cas: `172.28.34.50`  
