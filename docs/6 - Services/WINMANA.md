@@ -27,6 +27,7 @@ Cliquer sur "+" en haut à gauche de la page puis ajouter les informations néc�
  - Mot de passe  
  - Domaine  
 
+
 ## Gestion
 Il faut maintenant ajouter l'AD pour le gérer, sur le dashboard:  
 Ajouter d'autres serveurs à gérer > Rechercher maintenant > BLO-AD

@@ -11,10 +11,13 @@ Récupérer le nom du disque contenant les drivers
 Exécuter {DVD}:\virtio-win-gt-x64.msi
 Installer Viomem (driver pour meilleure gestion de la mémoire)
 
+
 ## Réseau
 L'AD n'a qu'une interface réseau, dans le réseau serveur, sont IP est dans notre cas: `172.28.34.50`  
 Il sert de DNS, il est son DNS
+
 Potentiellement, renommer l'interface, la notre s'appellera VLAN-Serveurs
+
 
 Dans SConfig:  
 ```
@@ -25,6 +28,7 @@ Suivre les étapes à l'écran pour configurer suivant la conf énoncée plus ha
 
 Pour éviter certaines erreurs (notamment d'authentification Kerberos plus tard), il faut désactiver l'ip v6:  
 `Disable-NetAdapterBinding -Name "VLAN-Serveurs" -ComponentID "ms_tcpip6" -Confirm:$false` 
+
 
 
 ## DC
