@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://DSISportLudique.github.io/SportLudique2Doc/3%20-%20Hardware/Switch/SwitchHP/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Documentation Switch HP A5500 - Doc Sport Ludique</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Documentation Switch HP A5500";
+        var mkdocs_page_input_path = "3 - Hardware/Switch/SwitchHP.md";
+        var mkdocs_page_url = "/SportLudique2Doc/3%20-%20Hardware/Switch/SwitchHP/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Doc Sport Ludique
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Sport Ludique Documentation</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">1   Guidelines</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../1%20-%20Guidelines/Guidelines/">Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../1%20-%20Guidelines/Notations/">Notations</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">2   Infrastructure</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../2%20-%20Infrastructure/ip/">Adressage IP du site</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../2%20-%20Infrastructure/physique/">Schéma physique</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">3   Hardware</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >Routeurs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Routeurs/Cisco892/">Cisco 892</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Routeurs/HSRP/">HSRP</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Routeurs/NAT/">NAT</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Routeurs/Routeur1921/">Cisco 1921</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Switch</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../Port%20Mirroring/">Setup Port mirroring Switch HP</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../ResetSwitch/">Reset Switch</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Documentation Switch HP A5500</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#notations">Notations</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#relations-portsvlans">Relations ports/vlans</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#config">Config</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#acces-internet">Accès Internet</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#management-du-routeur">Management du routeur</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#commandes_1">Commandes</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#nb">NB</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SwitchLACP/">Switch LACP</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SwitchSSH/">SSH Setup Switch HP A5500</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SwitchStack/">Stack Switch</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">4   Résultats</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../4%20-%20R%C3%A9sultats/AccesInternet/">Acces à Internet</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">5   Scripts</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../5%20-%20Scripts/setup/">Setup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">6   Services</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../6%20-%20Services/AD/">AD</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../6%20-%20Services/Gestion%20de%20l%27Active%20Directory/">Gestion de l'Active Directory</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../6%20-%20Services/WINMANA/">WIN MANA</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Doc Sport Ludique</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">3   Hardware</li>
+          <li class="breadcrumb-item">Switch</li>
+      <li class="breadcrumb-item active">Documentation Switch HP A5500</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="documentation-switch-hp-a5500">Documentation Switch HP A5500</h1>
+<h2 id="notations">Notations</h2>
+<p>Les notations sont définies dans <a href="../../../1%20-%20Guidelines/Notations/">Notations</a>  </p>
+<h2 id="relations-portsvlans">Relations ports/vlans</h2>
+<table>
+<thead>
+<tr>
+<th>Port</th>
+<th>VLAN(s)</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gi 2/0/1, 1/0/2</td>
+<td>tous</td>
+<td>Inter-switch</td>
+</tr>
+<tr>
+<td>Gi 2/0/3, 1/0/4</td>
+<td>105 &amp; 205 &amp; 150 &amp; 262</td>
+<td>WAN routeurs, Mana vers Proxmox et VLAN Serveurs pour Proxmox</td>
+</tr>
+<tr>
+<td>Gi 2/0/25, 1/0/26</td>
+<td>261</td>
+<td>Clients</td>
+</tr>
+<tr>
+<td>Gi 2/0/5, 2/0/6</td>
+<td>269</td>
+<td>Interco</td>
+</tr>
+<tr>
+<td>Gi 1/0/30 à 1/0/32</td>
+<td>150</td>
+<td>Management</td>
+</tr>
+</tbody>
+</table>
+<h2 id="config">Config</h2>
+<h3 id="acces-internet">Accès Internet</h3>
+<h4 id="logique">Logique</h4>
+<ul>
+<li>mise en place du port trunk vers l'interface inside du routeur  </li>
+<li>trunk comprend le vlan d'interconnexion (269) ainsi que les autres vlans utiles  </li>
+<li>création de la route par défaut  </li>
+</ul>
+<h4 id="commandes">Commandes</h4>
+<p>(interface réseau interconnexion)</p>
+<pre><code>&gt;system-view
+]interface vlan 269
+Vlan 269]ip address 192.168.69.1 255.255.255.0
+Vlan 269]quit
+
+]interface vlan 150
+Vlan 150]ip address 10.5.150.1 255.255.255.0
+Vlan 150]quit
+
+]interface vlan 261
+Vlan 261]ip address 172.28.33.254 255.255.255.0
+Vlan 261]quit
+
+]interface vlan 262
+Vlan 262]ip address 172.28.34.254 255.255.255.0
+Vlan 262]quit
+
+]ip route-static 0.0.0.0 0.0.0.0 192.168.69.254 description default-route
+</code></pre>
+<p>(faites pour notre vlan client)</p>
+<pre><code>]vlan 261
+Vlan 261]description Clients
+Vlan 261]quit
+
+]vlan 269
+Vlan 269]description interconnexion
+Vlan 269]quit
+
+]vlan 262
+Vlan 262]description Serveurs
+Vlan 262]quit
+
+]vlan 150
+Vlan 150]description Management
+Vlan 150]quit
+
+1/0/2]interface GigabitEthernet 1/0/2  
+1/0/2]port link-type trunk
+1/0/2]port trunk vlan 269
+1/0/2]quit
+
+]interface vlan 261
+Vlan 261]ip address 172.28.33.254 255.255.255.0
+Vlan 261]quit
+</code></pre>
+<h2 id="management-du-routeur">Management du routeur</h2>
+<p>sur l'interface connectée au routeur, j'ajoute le vlan de management au trunk (150) et le vlan d'interconnexion</p>
+<h4 id="commandes_1">Commandes</h4>
+<pre><code>&gt;system-view
+]interface GigabitEthernet 1/0/2
+1/0/2]port trunk permit vlan 150 269
+1/0/2]quit
+</code></pre>
+<p>(pvid = tags les frames non-taggés, c'est l'équivalent du VLAN natif
+permet l'accès à l'interface de management du routeur <a href="https://community.hpe.com/t5/comware-based/dymanic-tagged-vlan-assingment-hp-5500/td-p/6763660">Source</a></p>
+<h2 id="nb">NB</h2>
+<p>Le switch n'apparait pas durant un traceroute, afin de changer ça:</p>
+<pre><code>&gt;system-view
+]ip ttl-expires enable
+]ip unreachables enable
+]quit
+&gt;save
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../ResetSwitch/" class="btn btn-neutral float-left" title="Reset Switch"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../SwitchLACP/" class="btn btn-neutral float-right" title="Switch LACP">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../ResetSwitch/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../SwitchLACP/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
