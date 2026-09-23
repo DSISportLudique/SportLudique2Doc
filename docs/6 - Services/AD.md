@@ -23,7 +23,7 @@ Pour servir de DC il faut installer la feature de domaines:
 `Install-WindowsFeature -name AD-Domain-Services -IncludeManagementTools`  
 
 Il faut ensuite créer une forêt, notre domaine est `blois.sportludique.fr`:  
-`Install-ADDSForest -DomainName "blois.sportludique.fr"`
+`Install-ADDSForest -DomainName "blo.blois.sportludique.fr"`
 
 Son nom doit aussi être BLO-AD
 
