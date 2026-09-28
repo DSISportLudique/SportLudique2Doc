@@ -57,7 +57,8 @@ Routes:
 ### Activer SSH
 
 ```
-(config)#ip domain name blo-rou.lol // change this ofc
+(config)#ip domain name blois.sportludique.fr
+(config)#aaa new-model
 (config)#username USER privilege 15 secret PASS
 (config)#ip ssh version 2
 (config)#crypto key generate rsa general-keys modulus 4096
@@ -66,7 +67,7 @@ Routes:
 (config-line)#end
 
 (config)#access-list 23 permit X.X.X.X 0.0.0.255
-(config)#line vty 0 15
+(config)#line vty 0 4
 (config-line)#transport input ssh
 (config-line)#access-class 23 in
 (config-line)#exit
