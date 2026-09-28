@@ -1,0 +1,3 @@
+| Source | Destination | Service / protocole | Autorisé ? | Justification |
+|--------|-------------|---------------------|------------|---------------|
+|*||HTTP/HTTPS|oui|les internautes voudront accéder au site internet qui se trouve dans la DMZ|
