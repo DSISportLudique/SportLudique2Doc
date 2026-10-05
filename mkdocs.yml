@@ -2,4 +2,3 @@ site_name: Doc Sport Ludique
 site_url: https://DSISportLudique.github.io/SportLudique2Doc/
 theme:
   name: readthedocs
-  locale: fr
