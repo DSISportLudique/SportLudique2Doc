@@ -14,12 +14,10 @@
 - Faire l'installation normalement  
 
 ## Options à faire en priorité
-
 - 1) Assign Interfaces  
 - 2) Set Interface IP Address  
 
 #### 1) Assign Interfaces
-
 Bien assigner l'interface WAN de proxmox à l'interface WAN de OPNSense et pareil pour le LAN
 
 Attention: _les noms d'interfaces sont changées; c'est pourquoi il vaut mieux ne mettre qu'une seule interface, définir que c'est l'interface LAN ou WAN et après rajouter une autre interface pour bien se repérer et bien assigner_
@@ -27,7 +25,6 @@ Attention: _les noms d'interfaces sont changées; c'est pourquoi il vaut mieux ne
 (Une interface de Management sera rajoutée plus tard)
 
 #### 2) Set Interface IP Address
-
 - Associer une interface à une adresse IP  
 - la gateway est mise sur le WAN  
 - ne pas mettre d'IPV6  
@@ -35,13 +32,11 @@ Attention: _les noms d'interfaces sont changées; c'est pourquoi il vaut mieux ne
 **Ne pas mettre l'interface web en HTTP**
 
 ## Accès à l'interface Web de OPNSense
-
 - https://<AdresseIpDuFirewall>/  
 - entrer les logins root, seul accès à l'interface actuellement  
 - Une fois sur l'interface; pour ajouter des users: System -> Access -> Users -> + -> mettre les droits admin au user  
 
 ## Accès à l'interface Web réservé au VLAN de Management
-
 - Dans Proxmox, aller dans la configuration de la VM partie "hardware" et ajouter une carte réseau  
 - Mettre cette carte réseau dans le VLAN de Management
 - Retourner sur l'interface Web de OPNSense
