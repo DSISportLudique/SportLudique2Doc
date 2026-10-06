@@ -105,7 +105,17 @@ traceroute to 1.1.1.1 (1.1.1.1), 30 hops max, 60 byte packets
 ```
 
 ### VLAN Serveurs
-![Serveurs](../assets/PingInternetVlanServeurDMZ.png)
+```
+traceroute to 121.183.90.205 (121.183.90.205), 30 hops max, 60 byte packets
+ 1  * * *
+ 2  192.168.68.254 (192.168.68.254)  0.418 ms  0.459 ms  0.421 ms
+ 3  192.168.32.254 (192.168.32.254)  1.388 ms  1.374 ms  1.359 ms
+ 4  192.168.69.252 (192.168.69.252)  3.994 ms  4.364 ms  4.376 ms
+ 5  183.44.41.1 (183.44.41.1)  3.409 ms  3.394 ms  3.415 ms
+ 6  121.183.90.205 (121.183.90.205)  3.931 ms  3.662 ms  3.654 ms
+```
+
+### Fiche de recette 
 
 | Source | Destination | Connectivité IP | Résolution DNS | Service testé (protocole/port) |
 |--------|-------------|-----------------|----------------|--------------------------------|
