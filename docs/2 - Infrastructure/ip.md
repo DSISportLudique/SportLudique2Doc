@@ -6,19 +6,21 @@ Les VLANs disponibles sont:
 - 150  
 - 260 - 269  
 
-## VLANs
+### VLANs
 Le vlan 150 aura pour adresse réseau `10.5.150.0/24`  
   
 La plage d'adresse réseau dédié aux autres VLANs `172.28.32.0/19` à `172.28.41.0/19` (le 3e octet est 32 + vlanid - 260)  
-Exception: vlan 269 qui est dans un autre réseau `192.168.69.0/24`
-
+Exceptions:
+- vlan 269, sw2fai dans le réseau `192.168.69.0/24`
+- vlan 260, DMZ dans le réseau `192.168.32.0/24`
+- vlan 268, sw2fw dans le réseau `192.168.68.0/24`
+    
 L'adresse réseau du FAI1 est `221.87.141.0/30` et celle du FAI2 `183.44.4.0/30`
-
 
 
 ## Schéma Réseau
 
-![schéma reseau](../assets/infra.drawio.png)
+![schéma reseau](../assets/SchemaLogDMZ.drawio.png)
 
 
 ## Schéma du réseau de Management
