@@ -1,7 +1,0 @@
-Internet (FAI) -> Routeur {+NAT/PAT} -> Firewall {+NAT adresse FIREWALL} -> Serveur de la DMZ
-
-réseau interne -> Coeur du réseau -> Firewall {+NAT adresse FIREWALL} -> Serveur de la DMZ
-
-LAN -> Coeur du réseau -> Firewall {+1er NAT adresse FIREWALL} -> Firewall {+2nd NAT adresse FIREWALL} -> Routeur {+3ème NAT adresse ROUTEUR} -> Internet (FAI)
-
-VLAN Administration -> Coeur du réseau -> Serveur de la DMZ (Interface de Management)
