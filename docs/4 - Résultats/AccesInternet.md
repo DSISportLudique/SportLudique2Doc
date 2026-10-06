@@ -115,6 +115,14 @@ traceroute to 121.183.90.205 (121.183.90.205), 30 hops max, 60 byte packets
  6  121.183.90.205 (121.183.90.205)  3.931 ms  3.662 ms  3.654 ms
 ```
 
+### Machine dans DMZ depuis LAN
+```
+traceroute to 192.168.32.53 (192.168.32.53), 30 hops max, 60 byte packets
+ 1  172.28.34.254 (172.28.34.254)  3.403 ms  3.804 ms  2.586 ms
+ 2  192.168.68.254 (192.168.68.254)  1.120 ms  0.963 ms  1.014 ms
+ 3  192.168.32.53 (192.168.32.53)  1.595 ms  1.562 ms  1.569 ms
+```
+
 ### Fiche de recette 
 
 | Source | Destination | Connectivité IP | Résolution DNS | Service testé (protocole/port) |
@@ -129,3 +137,4 @@ traceroute to 121.183.90.205 (121.183.90.205), 30 hops max, 60 byte packets
 | 172.28.34.69 (Vlan 262: Serveurs) | 1.1.1.1 | oui | non | ICMP |
 | 10.5.150.117 (Vlan 150: Management) | 10.5.150.250 (Firewall IN) | oui | non | ICMP |
 | 10.5.150.117 (Vlan 150: Management) | 10.5.150.116 (Firewall OUT) | oui | non | ICMP |
+| 172.28.33.100 (Vlan 261: Clients) | 192.168.32.53 (Vlan 260: DMZ) | oui | non | ICMP |
