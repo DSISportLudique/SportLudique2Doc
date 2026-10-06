@@ -7,7 +7,8 @@
 
 ### Preuve de résultat:
 Le 1 apparait en * * * car caché par défaut, pour l'afficher, se référer à la [config générale](../3 - Hardware/Switch/SwitchHP.md/#nb)
-```$ traceroute 1.1.1.1
+```
+$ traceroute 1.1.1.1
 traceroute to 1.1.1.1 (1.1.1.1), 30 hops max, 60 byte packets
  1  * * *
  2  192.168.69.254 (192.168.69.254)  2.630 ms  2.680 ms  2.742 ms
@@ -29,10 +30,11 @@ traceroute to 1.1.1.1 (1.1.1.1), 30 hops max, 60 byte packets
 ``` 
 
 ## HSRP
-Avec la configuration dans [HSRP](../../5 - Hardware/Switch/hsrp.md)
+Avec la configuration dans [HSRP](../3 - Hardware/Routeurs/HSRP.md)
 
 ### Routeur 1 OFF
-```$ traceroute 1.1.1.1
+``` 
+$ traceroute 1.1.1.1
 traceroute to 1.1.1.1 (1.1.1.1), 30 hops max, 60 byte packets
  1  * * *
  2  192.168.69.252 (192.168.69.252)  3.482 ms  3.721 ms  3.816 ms
@@ -54,7 +56,8 @@ traceroute to 1.1.1.1 (1.1.1.1), 30 hops max, 60 byte packets
 ``` 
 
 ### Routeur 2 OFF
-``` ~ $ traceroute 1.1.1.1
+``` 
+$ traceroute 1.1.1.1
 traceroute to 1.1.1.1 (1.1.1.1), 30 hops max, 60 byte packets
  1  * * *
  2  192.168.69.253 (192.168.69.253)  2.040 ms  2.086 ms  2.170 ms
@@ -76,10 +79,11 @@ traceroute to 1.1.1.1 (1.1.1.1), 30 hops max, 60 byte packets
 ``` 
 
 ### VLAN Server + DMZ
-![Serveurs](../../assets/'ping internet depuis vlan serveur par dmz')
+![Serveurs](../assets/PingInternetVlanServeurDMZ.png)
 
 ## Avec la DMZ
-```$ traceroute 1.1.1.1
+```
+$ traceroute 1.1.1.1
 traceroute to 1.1.1.1 (1.1.1.1), 30 hops max, 60 byte packets
  1  * * *
  2  192.168.68.254 (192.168.68.254)  1.362 ms  1.353 ms  1.344 ms
