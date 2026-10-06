@@ -77,3 +77,6 @@ traceroute to 1.1.1.1 (1.1.1.1), 30 hops max, 60 byte packets
 16  141.101.67.163 (141.101.67.163)  6.578 ms 141.101.67.179 (141.101.67.179)  6.443 ms 141.101.67.189 (141.101.67.189)  7.124 ms
 17  one.one.one.one (1.1.1.1)  6.515 ms  6.324 ms  6.634 ms
 ``` 
+
+### VLAN Server + DMZ
+![Serveurs](../../assets/'ping internet depuis vlan serveur par dmz')
