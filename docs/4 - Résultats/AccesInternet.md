@@ -139,11 +139,11 @@ traceroute to 192.168.32.53 (192.168.32.53), 30 hops max, 60 byte packets
 | Source | Destination | Connectivité IP | Résolution DNS | Service testé (protocole/port) |
 |--------|-------------|-----------------|----------------|--------------------------------|
 | 192.168.32.53/24 | 192.168.32.254 (Vlan 260: DMZ) | oui | non | ICMP |
-| 192.168.32.53/24 | 192.168.69.254 (Vlan 269: FW2FAI) | non | non | ICMP |
+| 192.168.32.53/24 | 192.168.69.254 (Vlan 269: FW2FAI) | oui | non | ICMP |
 | 192.168.32.53/24 | 1.1.1.1 | oui | non | ICMP |
-| 192.168.32.53/24 | 192.168.68.254 | non | non | ICMP |
-| 192.168.32.53/24 | 172.28.33.69 | non | non | ICMP |
-| 192.168.32.53/24 | 172.28.34.69 | non | non | ICMP |
+| 192.168.32.53/24 | 192.168.68.254 (Vlan 268: SW2FW) | non | non | ICMP |
+| 192.168.32.53/24 | 172.28.33.69 (Vlan 261: Clients) | non | non | ICMP |
+| 192.168.32.53/24 | 172.28.34.69 (Vlan 262: Serveurs) | non | non | ICMP |
 
 #### VLAN Serveurs
 
@@ -160,7 +160,7 @@ traceroute to 192.168.32.53 (192.168.32.53), 30 hops max, 60 byte packets
 |--------|-------------|-----------------|----------------|--------------------------------|
 | 10.5.150.117/24 | 10.5.150.250 (Firewall IN) | oui | non | ICMP |
 | 10.5.150.117/24 | 10.5.150.116 (Firewall OUT) | oui | non | ICMP |
-| 10.5.150.117/24 | 192.168.32.53 | oui | non | ICMP |
-| 10.5.150.117/24 | 172.28.33.69 | non | non | ICMP |
+| 10.5.150.117/24 | 192.168.32.53 (Vlan 260: DMZ) | oui | non | ICMP |
+| 10.5.150.117/24 | 172.28.33.69 (Vlan 261: Clients) | non | non | ICMP |
 
 *Conf actuelle en PASS-ALL*
