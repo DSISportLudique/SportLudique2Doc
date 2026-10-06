@@ -58,8 +58,20 @@ vlan 150#ip address X.X.X.X 255.255.255.0
 ```
 Host R253
     HostName X.X.X.X
-    User <Nom Admin>
+User <Nom Admin>
     KexAlgorithms diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1
     HostkeyAlgorithms +ssh-rsa
     Ciphers aes128-cbc,3des-cbc
 ```
+
+## Setup
+
+*Vlans nécessaires:*
+- Vlan 150 (Mana) et 269 (Interco)  
+
+- mise en place des adresses IP  
+
+## Routage
+
+route par défaut: vers FAI
+route vers LAN de BLOIS: vers firewall StormShield

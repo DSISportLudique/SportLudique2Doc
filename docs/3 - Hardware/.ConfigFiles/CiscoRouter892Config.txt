@@ -1,5 +1,5 @@
 !
-! Last configuration change at 09:24:55 UTC Tue Sep 22 2026 by Enzo
+! Last configuration change at 08:17:10 UTC Tue Oct 6 2026 by Enzo
 !
 version 15.5
 service timestamps debug datetime msec
@@ -52,7 +52,7 @@ ip domain name BLO-ROU-892
 ip cef
 no ipv6 cef
 !
-!         
+!
 !
 !
 !
@@ -60,7 +60,7 @@ multilink bundle-name authenticated
 !
 !
 !
-!
+!         
 !
 !
 !
@@ -80,7 +80,7 @@ track 1 ip sla 1 reachability
 !
 !
 !
-!         
+!
 !
 !
 !
@@ -174,7 +174,8 @@ no ip http secure-server
 !
 ip nat inside source list 10 interface GigabitEthernet9 overload
 ip route 0.0.0.0 0.0.0.0 183.44.41.1
-ip route 172.28.32.0 255.255.224.0 192.168.69.1 permanent
+ip route 172.28.32.0 255.255.224.0 192.168.69.2
+ip route 192.168.68.0 255.255.255.0 192.168.69.1
 ip ssh version 2
 !
 ip sla 1
@@ -185,7 +186,9 @@ ip sla schedule 1 life forever start-time now
 access-list 10 permit 172.28.32.0 0.0.31.255
 access-list 10 permit 10.5.150.0 0.0.0.255
 access-list 10 permit 192.168.69.0 0.0.0.255
-!
+access-list 10 permit 192.168.68.0 0.0.0.255
+access-list 10 permit 192.168.32.0 0.0.0.255
+!         
 !
 !
 control-plane
