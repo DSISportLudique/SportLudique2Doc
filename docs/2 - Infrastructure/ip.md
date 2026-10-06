@@ -22,7 +22,3 @@ L'adresse réseau du FAI1 est `221.87.141.0/30` et celle du FAI2 `183.44.4.0/30`
 
 ![schéma reseau](../assets/SchemaLogDMZ.drawio.png)
 
-
-## Schéma du réseau de Management
-
-![schéma VLAN Management](../assets/InfraManagement.drawio.png)
