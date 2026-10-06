@@ -1,7 +1,7 @@
 !
-! Last configuration change at 08:25:54 UTC Tue Sep 22 2026 by enzo
-! NVRAM config last updated at 08:26:05 UTC Tue Sep 22 2026 by enzo
-! NVRAM config last updated at 08:26:05 UTC Tue Sep 22 2026 by enzo
+! Last configuration change at 07:12:52 UTC Tue Oct 6 2026 by enzo
+! NVRAM config last updated at 07:39:03 UTC Tue Oct 6 2026 by enzo
+! NVRAM config last updated at 07:39:03 UTC Tue Oct 6 2026 by enzo
 version 15.1
 service timestamps debug datetime msec
 service timestamps log datetime msec
@@ -27,13 +27,13 @@ aaa session-id common
 !
 no ipv6 cef
 ip source-route
-ip cef    
+ip cef
 !
 !
 !
 !
 !
-ip domain name blo-rou-name.lol
+ip domain name blois.sportludique.fr
 vlan ifdescr detail
 multilink bundle-name authenticated
 !
@@ -61,7 +61,7 @@ interface GigabitEthernet0/0
  ip virtual-reassembly in
  duplex auto
  speed auto
-!
+!         
 interface GigabitEthernet0/0.105
 !
 interface GigabitEthernet0/0.150
@@ -108,13 +108,14 @@ no ip http secure-server
 !
 ip nat inside source list 10 interface GigabitEthernet0/1.105 overload
 ip route 0.0.0.0 0.0.0.0 221.87.141.2 permanent
-ip route 172.28.32.0 255.255.224.0 192.168.69.1 permanent
+ip route 172.28.32.0 255.255.224.0 192.168.69.2
 !
+access-list 10 permit 192.168.32.0 0.0.0.255
 access-list 10 permit 172.28.32.0 0.0.31.255
 access-list 10 permit 192.168.69.0 0.0.0.255
 access-list 10 permit 10.5.150.0 0.0.0.255
 access-list 23 permit 10.5.150.0 0.0.0.255
-!         
+!
 !
 !
 !
@@ -125,7 +126,7 @@ control-plane
 !
 line con 0
 line aux 0
-line 2
+line 2    
  no activation-character
  no exec
  transport preferred none
