@@ -75,3 +75,8 @@ User <Nom Admin>
 
 route par défaut: vers FAI
 route vers LAN de BLOIS: vers firewall StormShield
+
+```
+ip route-static 0.0.0.0 0.0.0.0 183.44.41.1 permanent
+ip route-static 172.28.32.0 255.255.255.0 192.168.69.2
+```

@@ -36,7 +36,6 @@ Les notations sont définies dans [Notations](../../1 - Guidelines/Notations.md)
 ```
 >system-view
 ]interface vlan 269
-Vlan 269]ip address 192.168.69.1 255.255.255.0
 Vlan 269]quit
 
 ]interface vlan 150

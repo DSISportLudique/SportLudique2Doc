@@ -138,5 +138,5 @@ ip route 0.0.0.0 0.0.0.0 221.87.141.2 permanent
 La route suivante est nécessaire pour router les vlans
 
 ```
-ip route 172.28.32.0 255.255.224.0 192.168.69.1 permanent
+ip route 172.28.32.0 255.255.224.0 192.168.69.2 permanent
 ```
