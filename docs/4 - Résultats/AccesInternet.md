@@ -7,8 +7,7 @@
 
 ### Preuve de résultat:
 Le 1 apparait en * * * car caché par défaut, pour l'afficher, se référer à la [config générale](../3 - Hardware/Switch/SwitchHP.md/#nb)
-``` 
-~ $ traceroute 1.1.1.1
+```$ traceroute 1.1.1.1
 traceroute to 1.1.1.1 (1.1.1.1), 30 hops max, 60 byte packets
  1  * * *
  2  192.168.69.254 (192.168.69.254)  2.630 ms  2.680 ms  2.742 ms
@@ -33,8 +32,7 @@ traceroute to 1.1.1.1 (1.1.1.1), 30 hops max, 60 byte packets
 Avec la configuration dans [HSRP](../../5 - Hardware/Switch/hsrp.md)
 
 ### Routeur 1 OFF
-``` 
-~ $ traceroute 1.1.1.1
+```$ traceroute 1.1.1.1
 traceroute to 1.1.1.1 (1.1.1.1), 30 hops max, 60 byte packets
  1  * * *
  2  192.168.69.252 (192.168.69.252)  3.482 ms  3.721 ms  3.816 ms
@@ -56,8 +54,7 @@ traceroute to 1.1.1.1 (1.1.1.1), 30 hops max, 60 byte packets
 ``` 
 
 ### Routeur 2 OFF
-``` 
-~ $ traceroute 1.1.1.1
+``` ~ $ traceroute 1.1.1.1
 traceroute to 1.1.1.1 (1.1.1.1), 30 hops max, 60 byte packets
  1  * * *
  2  192.168.69.253 (192.168.69.253)  2.040 ms  2.086 ms  2.170 ms
@@ -80,3 +77,27 @@ traceroute to 1.1.1.1 (1.1.1.1), 30 hops max, 60 byte packets
 
 ### VLAN Server + DMZ
 ![Serveurs](../../assets/'ping internet depuis vlan serveur par dmz')
+
+## Avec la DMZ
+```$ traceroute 1.1.1.1
+traceroute to 1.1.1.1 (1.1.1.1), 30 hops max, 60 byte packets
+ 1  * * *
+ 2  192.168.68.254 (192.168.68.254)  1.362 ms  1.353 ms  1.344 ms
+ 3  192.168.32.254 (192.168.32.254)  1.520 ms  1.582 ms  1.573 ms
+ 4  192.168.69.252 (192.168.69.252)  5.496 ms  2.573 ms  2.566 ms
+ 5  183.44.41.1 (183.44.41.1)  5.282 ms  5.273 ms  5.265 ms
+ 6  121.183.90.206 (121.183.90.206)  5.256 ms  3.927 ms  3.911 ms
+ 7  172.16.200.254 (172.16.200.254)  3.903 ms  3.775 ms  4.090 ms
+ 8  172.16.60.1 (172.16.60.1)  3.981 ms  2.988 ms  2.872 ms
+ 9  192.168.10.2 (192.168.10.2)  6.620 ms  5.540 ms  5.533 ms
+10  10.99.6.142 (10.99.6.142)  4.276 ms  4.252 ms  4.244 ms
+11  * * *
+12  vl1799-be6-ren-nr-orleans-rtr-091.noc.renater.fr (193.51.184.233)  6.388 ms  6.482 ms  6.453 ms
+13  vl1799-be6-ren-nr-orleans-rtr-091.noc.renater.fr (193.51.184.233)  6.444 ms  4.739 ms  5.291 ms
+14  te0-2-0-29-ren-nr-orsay-rtr-091.noc.renater.fr (193.55.204.88)  7.800 ms te0-0-0-8-ren-nr-orsay-rtr-091.noc.renater.fr (193.55.204.84)  7.016 ms te0-2-0-31-ren-nr-orsay-rtr-091.noc.renater.fr (193.55.204.92)  7.604 ms
+15  et-5-5-1-ren-nr-paris2-rtr-131.noc.renater.fr (193.51.180.42)  8.052 ms  8.576 ms  8.020 ms
+16  equinix-paris.cloudflare.com (195.42.144.143)  8.547 ms  8.609 ms  8.532 ms
+17  141.101.67.142 (141.101.67.142)  6.858 ms 141.101.67.143 (141.101.67.143)  7.210 ms 141.101.67.142 (141.101.67.142)  6.890 ms
+18  141.101.67.153 (141.101.67.153)  8.361 ms 141.101.67.199 (141.101.67.199)  9.801 ms 141.101.67.181 (141.101.67.181)  16.520 ms
+19  one.one.one.one (1.1.1.1)  8.342 ms  8.861 ms  7.931 ms
+```
