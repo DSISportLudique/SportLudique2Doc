@@ -125,35 +125,42 @@ traceroute to 192.168.32.53 (192.168.32.53), 30 hops max, 60 byte packets
 
 ### Fiche de recette 
 
-| Source | Destination | Connectivité IP | Résolution DNS | Service testé (protocole/port) |
-|--------|-------------|-----------------|----------------|--------------------------------|
-| 172.28.33.69/24 (Vlan 261: Clients) | 192.168.68.254 (Vlan 268: SW2FW) | oui | non | ICMP |
-| 172.28.33.69/24 (Vlan 261: Clients) | 1.1.1.1 | oui | non | ICMP |
-| 172.28.33.69/24 (Vlan 261: Clients) | 192.168.32.53 (Vlan 260: DMZ) | oui | non | ICMP |
-| 172.28.33.69/24 (Vlan 261: Clients) | 192.168.69.254 (Vlan 260: DMZ) | oui | non | ICMP |
+#### VLAN Clients
 
 | Source | Destination | Connectivité IP | Résolution DNS | Service testé (protocole/port) |
 |--------|-------------|-----------------|----------------|--------------------------------|
-| 192.168.32.53/24 (Vlan 260: DMZ) | 192.168.32.254 (Vlan 260: DMZ) | oui | non | ICMP |
-| 192.168.32.53/24 (Vlan 260: DMZ) | 192.168.69.254 (Vlan 269: FW2FAI) | non | non | ICMP |
-| 192.168.32.53/24 (Vlan 260: DMZ) | 1.1.1.1 | oui | non | ICMP |
-| 192.168.32.53/24 (Vlan 260: DMZ) | 192.168.68.254 | non | non | ICMP |
-| 192.168.32.53/24 (Vlan 260: DMZ) | 172.28.33.69 | non | non | ICMP |
-| 192.168.32.53/24 (Vlan 260: DMZ) | 172.28.34.69 | non | non | ICMP |
+| 172.28.33.69/24 | 192.168.68.254 (Vlan 268: SW2FW) | oui | non | ICMP |
+| 172.28.33.69/24 | 1.1.1.1 | oui | non | ICMP |
+| 172.28.33.69/24 | 192.168.32.53 (Vlan 260: DMZ) | oui | non | ICMP |
+| 172.28.33.69/24 | 192.168.69.254 (Vlan 260: DMZ) | oui | non | ICMP |
 
-
-| Source | Destination | Connectivité IP | Résolution DNS | Service testé (protocole/port) |
-|--------|-------------|-----------------|----------------|--------------------------------|
-| 172.28.34.69/24 (Vlan 262: Serveurs) | 192.168.69.254 (Vlan 269: FW2FAI) | oui | non | ICMP |
-| 172.28.34.69/24 (Vlan 262: Serveurs) | 192.168.68.254 (Vlan 268: SW2FW) | oui | non | ICMP |
-| 172.28.34.69/24 (Vlan 262: Serveurs) | 1.1.1.1 | oui | non | ICMP |
-| 172.28.34.69/24 (Vlan 262: Serveurs) | 192.168.32.53 (Vlan 260: DMZ) | oui | non | ICMP |
+#### VLAN DMZ
 
 | Source | Destination | Connectivité IP | Résolution DNS | Service testé (protocole/port) |
 |--------|-------------|-----------------|----------------|--------------------------------|
-| 10.5.150.117/24 (Vlan 150: Management) | 10.5.150.250 (Firewall IN) | oui | non | ICMP |
-| 10.5.150.117/24 (Vlan 150: Management) | 10.5.150.116 (Firewall OUT) | oui | non | ICMP |
-| 10.5.150.117/24 (Vlan 150: Management) | 192.168.32.53 | oui | non | ICMP |
-| 10.5.150.117/24 (Vlan 150: Management) | 172.28.33.69 | non | non | ICMP |
+| 192.168.32.53/24 | 192.168.32.254 (Vlan 260: DMZ) | oui | non | ICMP |
+| 192.168.32.53/24 | 192.168.69.254 (Vlan 269: FW2FAI) | non | non | ICMP |
+| 192.168.32.53/24 | 1.1.1.1 | oui | non | ICMP |
+| 192.168.32.53/24 | 192.168.68.254 | non | non | ICMP |
+| 192.168.32.53/24 | 172.28.33.69 | non | non | ICMP |
+| 192.168.32.53/24 | 172.28.34.69 | non | non | ICMP |
+
+#### VLAN Serveurs
+
+| Source | Destination | Connectivité IP | Résolution DNS | Service testé (protocole/port) |
+|--------|-------------|-----------------|----------------|--------------------------------|
+| 172.28.34.69/24 | 192.168.69.254 (Vlan 269: FW2FAI) | oui | non | ICMP |
+| 172.28.34.69/24 | 192.168.68.254 (Vlan 268: SW2FW) | oui | non | ICMP |
+| 172.28.34.69/24 | 1.1.1.1 | oui | non | ICMP |
+| 172.28.34.69/24 | 192.168.32.53 (Vlan 260: DMZ) | oui | non | ICMP |
+
+#### VLAN Management
+
+| Source | Destination | Connectivité IP | Résolution DNS | Service testé (protocole/port) |
+|--------|-------------|-----------------|----------------|--------------------------------|
+| 10.5.150.117/24 | 10.5.150.250 (Firewall IN) | oui | non | ICMP |
+| 10.5.150.117/24 | 10.5.150.116 (Firewall OUT) | oui | non | ICMP |
+| 10.5.150.117/24 | 192.168.32.53 | oui | non | ICMP |
+| 10.5.150.117/24 | 172.28.33.69 | non | non | ICMP |
 
 *Conf actuelle en PASS-ALL*
