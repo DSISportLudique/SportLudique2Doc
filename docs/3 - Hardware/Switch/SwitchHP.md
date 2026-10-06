@@ -7,11 +7,18 @@ Les notations sont définies dans [Notations](../../1 - Guidelines/Notations.md)
 
 | Port | VLAN(s) | Usage |
 |------|---------|-------|
-| Gi 2/0/1, 1/0/2 | tous | Inter-switch |
-| Gi 2/0/3, 1/0/4 | 105 & 205 & 150 & 262 | WAN routeurs, Mana vers Proxmox et VLAN Serveurs pour Proxmox |
-| Gi 2/0/25, 1/0/26 | 261 | Clients |
-| Gi 2/0/5, 2/0/6 | 269 | Interco |
-| Gi 1/0/30 à 1/0/32 | 150 | Management |
+| 1/0/1 \ 2/0/2 | 261 | Clients |
+| 1/0/2 | 105 150 205 260 to 269| trunk Switch à Switch |
+| 1/0/4 | 105 | WAN routeur 1 |
+| 1/0/6 | 150 260 262 268 269 | LAN routeur 1 |
+| 1/0/29 | 268 |  VLAN Switch2FW|
+| 1/0/{30,31,32} | 150 | Management |
+| 2/0/1 | 105 150 205 260 to 269 | trunk Switch à Switch |
+| 2/0/3 | 205 | WAN routeur 2 |
+| 2/0/5 | 150 260 262 268 269 | LAN routeur 2 |
+| 2/0/29 | 269 | WAN Firewall |
+| 2/0/30 | 150 260 262 268 269 | LAN Firewall |
+| 2/0/32 | 1 105 150 205 261 262 | port-mirroring |
 
 ## Config
 
