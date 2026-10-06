@@ -78,10 +78,8 @@ traceroute to 1.1.1.1 (1.1.1.1), 30 hops max, 60 byte packets
 17  one.one.one.one (1.1.1.1)  6.515 ms  6.324 ms  6.634 ms
 ``` 
 
-### VLAN Server + DMZ
-![Serveurs](../assets/PingInternetVlanServeurDMZ.png)
-
 ## Avec la DMZ
+### Vlan Clients
 ```
 $ traceroute 1.1.1.1
 traceroute to 1.1.1.1 (1.1.1.1), 30 hops max, 60 byte packets
@@ -105,3 +103,19 @@ traceroute to 1.1.1.1 (1.1.1.1), 30 hops max, 60 byte packets
 18  141.101.67.153 (141.101.67.153)  8.361 ms 141.101.67.199 (141.101.67.199)  9.801 ms 141.101.67.181 (141.101.67.181)  16.520 ms
 19  one.one.one.one (1.1.1.1)  8.342 ms  8.861 ms  7.931 ms
 ```
+
+### VLAN Serveurs
+![Serveurs](../assets/PingInternetVlanServeurDMZ.png)
+
+| Source | Destination | Connectivité IP | Résolution DNS | Service testé (protocole/port) |
+|--------|-------------|-----------------|----------------|--------------------------------|
+| 172.28.33.69/24 (Vlan 261: Clients) | 192.168.68.254 (Vlan 268: SW2FW) | oui | non | ICMP |
+| 172.28.33.69/24 (Vlan 261: Clients) | 1.1.1.1 | oui | non | ICMP |
+| 192.168.32.1 (Vlan 260: DMZ) | 192.168.32.254 (Vlan 260: DMZ) | oui | non | ICMP |
+| 192.168.32.1 (Vlan 260: DMZ) | 192.168.69.254 (Vlan 269: FW2FAI) | non | non | ICMP |
+| 192.168.32.1 (Vlan 260: DMZ) | 1.1.1.1 | oui | non | ICMP |
+| 172.28.34.69 (Vlan 262: Serveurs) | 192.168.69.254 (Vlan 269: FW2FAI) | oui | non | ICMP |
+| 172.28.34.69 (Vlan 262: Serveurs) | 192.168.68.254 (Vlan 268: SW2FW) | oui | non | ICMP |
+| 172.28.34.69 (Vlan 262: Serveurs) | 1.1.1.1 | oui | non | ICMP |
+| 10.5.150.117 (Vlan 150: Management) | 10.5.150.250 (Firewall IN) | oui | non | ICMP |
+| 10.5.150.117 (Vlan 150: Management) | 10.5.150.116 (Firewall OUT) | oui | non | ICMP |
