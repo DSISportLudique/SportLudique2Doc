@@ -31,8 +31,9 @@ Attention: _les noms d'interfaces sont changees; c'est pourquoi il vaut mieux ne
 
 **Ne pas mettre l'interface web en HTTP**
 
-## Accès à l'interface Web de OPNSense
-- https://<AdresseIpDuFirewall>/  
+## Acces a l'interface Web de OPNSense
+
+- https://\<AdresseIpDuFirewall\>/  
 - entrer les logins root, seul acces a l'interface actuellement  
 - Une fois sur l'interface; pour ajouter des users: System -> Access -> Users -> + -> mettre les droits admin au user  
 
