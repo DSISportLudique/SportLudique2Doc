@@ -48,3 +48,7 @@ Attention: _les noms d'interfaces sont changees; c'est pourquoi il vaut mieux ne
 - Creer une regle empÃªchant l'acces a l'interface Web de toutes les autres interfaces (LAN/WAN)
 - Appliquer la regle puis passer par le VLAN de Management
 
+## Accès à internet du LAN
+- Mise en place d'une route: 172.28.32.0/19 par 192.168.68.1 (LAN Blois par Coeur de Réseau)
+- Mettre pour le moment en place un PASS ALL du LAN afin de faire des tests
+**A MODIFIER**
