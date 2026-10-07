@@ -1,7 +1,8 @@
+Current configuration : 2800 bytes
 !
-! Last configuration change at 07:12:52 UTC Tue Oct 6 2026 by enzo
-! NVRAM config last updated at 07:39:03 UTC Tue Oct 6 2026 by enzo
-! NVRAM config last updated at 07:39:03 UTC Tue Oct 6 2026 by enzo
+! Last configuration change at 07:41:59 UTC Wed Oct 7 2026 by lucas
+! NVRAM config last updated at 07:42:01 UTC Wed Oct 7 2026 by lucas
+! NVRAM config last updated at 07:42:01 UTC Wed Oct 7 2026 by lucas
 version 15.1
 service timestamps debug datetime msec
 service timestamps log datetime msec
@@ -108,7 +109,8 @@ no ip http secure-server
 !
 ip nat inside source list 10 interface GigabitEthernet0/1.105 overload
 ip route 0.0.0.0 0.0.0.0 221.87.141.2 permanent
-ip route 172.28.32.0 255.255.224.0 192.168.69.2
+ip route 172.28.32.0 255.255.224.0 192.168.69.1 permanent
+ip route 192.168.32.0 255.255.255.0 192.168.69.1
 !
 access-list 10 permit 192.168.32.0 0.0.0.255
 access-list 10 permit 172.28.32.0 0.0.31.255
@@ -126,7 +128,7 @@ control-plane
 !
 line con 0
 line aux 0
-line 2    
+line 2
  no activation-character
  no exec
  transport preferred none
