@@ -1,5 +1,6 @@
+Current configuration : 3326 bytes
 !
-! Last configuration change at 08:17:10 UTC Tue Oct 6 2026 by Enzo
+! Last configuration change at 08:46:39 UTC Wed Oct 7 2026 by Enzo
 !
 version 15.5
 service timestamps debug datetime msec
@@ -173,9 +174,10 @@ no ip http secure-server
 !
 !
 ip nat inside source list 10 interface GigabitEthernet9 overload
-ip route 0.0.0.0 0.0.0.0 183.44.41.1
-ip route 172.28.32.0 255.255.224.0 192.168.69.2
-ip route 192.168.68.0 255.255.255.0 192.168.69.1
+ip route 0.0.0.0 0.0.0.0 183.44.41.1 permanent
+ip route 172.28.32.0 255.255.224.0 192.168.69.1 permanent
+ip route 192.168.32.0 255.255.255.0 192.168.69.1 permanent
+ip route 192.168.68.0 255.255.255.0 192.168.69.1 permanent
 ip ssh version 2
 !
 ip sla 1
@@ -188,7 +190,7 @@ access-list 10 permit 10.5.150.0 0.0.0.255
 access-list 10 permit 192.168.69.0 0.0.0.255
 access-list 10 permit 192.168.68.0 0.0.0.255
 access-list 10 permit 192.168.32.0 0.0.0.255
-!         
+!
 !
 !
 control-plane
