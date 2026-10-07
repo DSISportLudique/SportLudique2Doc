@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://DSISportLudique.github.io/SportLudique2Doc/7%20-%20DMZ/OPNSense/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>OPNSense - Doc Sport Ludique</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "OPNSense";
+        var mkdocs_page_input_path = "7 - DMZ/OPNSense.md";
+        var mkdocs_page_url = "/SportLudique2Doc/7%20-%20DMZ/OPNSense/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Doc Sport Ludique
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Sport Ludique Documentation</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">1   Guidelines</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../1%20-%20Guidelines/Guidelines/">Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../1%20-%20Guidelines/Notations/">Notations</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">2   Infrastructure</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../2%20-%20Infrastructure/ip/">Adressage IP du site</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../2%20-%20Infrastructure/physique/">Schéma physique</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">3   Hardware</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >Routeurs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../3%20-%20Hardware/Routeurs/Cisco892/">Cisco 892</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../3%20-%20Hardware/Routeurs/HSRP/">HSRP</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../3%20-%20Hardware/Routeurs/NAT/">NAT</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../3%20-%20Hardware/Routeurs/Routeur1921/">Cisco 1921</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Switch</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../3%20-%20Hardware/Switch/Port%20Mirroring/">Setup Port mirroring Switch HP</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../3%20-%20Hardware/Switch/ResetSwitch/">Reset Switch</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../3%20-%20Hardware/Switch/SwitchHP/">Documentation Switch HP A5500</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../3%20-%20Hardware/Switch/SwitchLACP/">Switch LACP</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../3%20-%20Hardware/Switch/SwitchSSH/">SSH Setup Switch HP A5500</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../3%20-%20Hardware/Switch/SwitchStack/">Stack Switch</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">4   Résultats</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../4%20-%20R%C3%A9sultats/AccesInternet/">Acces à Internet</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">5   Scripts</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../5%20-%20Scripts/ADUsers/">ADUsers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../5%20-%20Scripts/setup/">Setup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">6   Services</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../6%20-%20Services/AD/">AD</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../6%20-%20Services/Gestion%20de%20l%27Active%20Directory/">Gestion de l'Active Directory</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../6%20-%20Services/WINMANA/">WIN MANA</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">7   DMZ</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">OPNSense</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#creation-de-la-vm">Creation de la VM</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#setup">Setup</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#log-in">Log In</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#options-a-faire-en-priorite">Options à faire en priorité</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-assign-interfaces">1) Assign Interfaces</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-set-interface-ip-address">2) Set Interface IP Address</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#acces-a-linterface-web-de-opnsense">Acces a l'interface Web de OPNSense</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#acces-a-linterface-web-reserve-au-vlan-de-management">Accès à l'interface Web réservé au VLAN de Management</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#acces-a-internet-du-lan">Accès à internet du LAN</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stormshield/">StormShield</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Doc Sport Ludique</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">7   DMZ</li>
+      <li class="breadcrumb-item active">OPNSense</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="opnsense">OPNSense</h1>
+<h2 id="creation-de-la-vm">Creation de la VM</h2>
+<ul>
+<li>8G de Stockage et 4G de RAM est assez  </li>
+<li>Rajouter une interface pour le WAN  (Ici la premiere etait la "LAN" et donc l'interface "0" est la "LAN" et la "1" est la "WAN")  </li>
+<li>Sur Proxmox, mettre une interface pour commencer, definir si c'est la WAN ou la LAN  </li>
+</ul>
+<h2 id="setup">Setup</h2>
+<ul>
+<li>Creer un ZFS pour le disque, pas de RAID car disque petit  </li>
+<li>Entrer le mot de passe du compte Root</li>
+</ul>
+<h2 id="log-in">Log In</h2>
+<ul>
+<li>entrer: "User: installer; password:Opnsense" a noter qu'au premier boot l'iso est en qwerty  </li>
+<li>Faire l'installation normalement  </li>
+</ul>
+<h2 id="options-a-faire-en-priorite">Options à faire en priorité</h2>
+<ul>
+<li>1) Assign Interfaces  </li>
+<li>2) Set Interface IP Address  </li>
+</ul>
+<h4 id="1-assign-interfaces">1) Assign Interfaces</h4>
+<p>Bien assigner l'interface WAN de proxmox à l'interface WAN de OPNSense et pareil pour le LAN</p>
+<p>Attention: <em>les noms d'interfaces sont changees; c'est pourquoi il vaut mieux ne mettre qu'une seule interface, definir que c'est l'interface LAN ou WAN et apres rajouter une autre interface pour bien se reperer et bien assigner</em></p>
+<p>(Une interface de Management sera rajoutee plus tard)</p>
+<h4 id="2-set-interface-ip-address">2) Set Interface IP Address</h4>
+<ul>
+<li>Associer une interface à une adresse IP  </li>
+<li>la gateway est mise sur le WAN  </li>
+<li>ne pas mettre d'IPV6  </li>
+</ul>
+<p><strong>Ne pas mettre l'interface web en HTTP</strong></p>
+<h2 id="acces-a-linterface-web-de-opnsense">Acces a l'interface Web de OPNSense</h2>
+<ul>
+<li>https://\&lt;AdresseIpDuFirewall&gt;/  </li>
+<li>entrer les logins root, seul acces a l'interface actuellement  </li>
+<li>Une fois sur l'interface; pour ajouter des users: System -&gt; Access -&gt; Users -&gt; + -&gt; mettre les droits admin au user  </li>
+</ul>
+<h2 id="acces-a-linterface-web-reserve-au-vlan-de-management">Accès à l'interface Web réservé au VLAN de Management</h2>
+<ul>
+<li>Dans Proxmox, aller dans la configuration de la VM partie "hardware" et ajouter une carte réseau  </li>
+<li>Mettre cette carte réseau dans le VLAN de Management</li>
+<li>Retourner sur l'interface Web de OPNSense</li>
+<li>Mettre une adresse IP sur l'interface de Management dans "Interfaces" -&gt; "[Mana]"</li>
+<li>Aller dans "Firewall" puis "Rules" et ajouter une regle permettant au VLAN de Management d'acceder a l'interface web</li>
+<li>Appliquer la regle</li>
+<li>Dans la partie "Firewall" -&gt; "Settings" -&gt; "Advanced": decocher "Disable administration anti-lockout rule"</li>
+<li>Creer une regle empÃªchant l'acces a l'interface Web de toutes les autres interfaces (LAN/WAN)</li>
+<li>Appliquer la regle puis passer par le VLAN de Management</li>
+</ul>
+<h2 id="acces-a-internet-du-lan">Accès à internet du LAN</h2>
+<ul>
+<li>Mise en place d'une route: 172.28.32.0/19 par 192.168.68.1 (LAN Blois par Coeur de Réseau)</li>
+<li>Mettre pour le moment en place un PASS ALL du LAN afin de faire des tests
+<strong>A MODIFIER</strong></li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../6%20-%20Services/WINMANA/" class="btn btn-neutral float-left" title="WIN MANA"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../stormshield/" class="btn btn-neutral float-right" title="StormShield">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../6%20-%20Services/WINMANA/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../stormshield/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
