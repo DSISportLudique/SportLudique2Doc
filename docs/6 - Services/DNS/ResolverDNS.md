@@ -27,6 +27,10 @@ server:
 
     outgoing-interface: 172.28.34.53
 
+forward-zone:
+    name: blois.sportludique.fr
+        forward-addr: 192.168.32.53
+
 include-toplevel: "/etc/unbound/unbound.conf.d/*.conf"
 ```
 
