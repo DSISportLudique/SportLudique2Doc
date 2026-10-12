@@ -27,12 +27,18 @@ server:
 
     outgoing-interface: 172.28.34.53
 
-forward-zone:
+stub-zone:
     name: blois.sportludique.fr
-        forward-addr: 192.168.32.53
+        stub-addr: 192.168.32.53
+
+forward-zone:
+    name: sportludique.fr
+        forward-addr: 121.183.90.205
 
 include-toplevel: "/etc/unbound/unbound.conf.d/*.conf"
 ```
+
+Pour tester la configuration: `unbound-checkconf`
 
 ## Preuves
 
@@ -44,10 +50,10 @@ Server:         127.0.0.1
 Address:        127.0.0.1#53
 
 Non-authoritative answer:
-Name:   youtube.com
-Address: 172.217.22.206
-Name:   youtube.com
-Address: 2a00:1450:4007:81d::200e
+Name:   cheese.com
+Address: 195.149.84.43
+Name:   cheese.com
+Address: 2001:67c:38c::2b
 ```
 
 ## VLAN Management
@@ -57,10 +63,10 @@ Server:         10.5.150.153
 Address:        10.5.150.153#53
 
 Non-authoritative answer:
-Name:   youtube.com
-Address: 172.217.22.206
-Name:   youtube.com
-Address: 2a00:1450:4007:81d::200e
+Name:   cheese.com
+Address: 195.149.84.43
+Name:   cheese.com
+Address: 2001:67c:38c::2b
 ```
 
 ### VLAN Serveurs
@@ -70,8 +76,8 @@ Server:         172.28.34.53
 Address:        172.28.34.53#53
 
 Non-authoritative answer:
-Name:   youtube.com
-Address: 172.217.22.206
-Name:   youtube.com
-Address: 2a00:1450:4007:81d::200e
+Name:   cheese.com
+Address: 195.149.84.43
+Name:   cheese.com
+Address: 2001:67c:38c::2b
 ```
