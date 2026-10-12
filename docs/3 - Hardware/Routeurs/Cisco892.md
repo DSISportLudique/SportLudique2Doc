@@ -80,3 +80,12 @@ route vers LAN de BLOIS: vers firewall StormShield
 ip route-static 0.0.0.0 0.0.0.0 183.44.41.1 permanent
 ip route-static 172.28.32.0 255.255.255.0 192.168.69.2
 ```
+
+## Port Forwarding
+
+Accès au serveur DNS d'autorité par internet:
+Envoi des paquets sur le port 53 vers l'interface WAN du FireWall Stormshield SN210
+```
+ip nat inside source static udp 192.168.69.1 53 183.44.41.2 53
+ip nat inside source static tcp 192.168.69.1 53 183.44.41.2 53
+```
