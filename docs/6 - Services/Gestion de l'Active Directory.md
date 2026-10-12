@@ -1,13 +1,14 @@
 # Gestion de l'Active Directory
 
 ## Installation du rôle
-Tout d'abord il faut ajouter les outils nécéssaire au Serveur Windows avec GUI
-Aller dans "Gérer" -> "Ajouter des rôles et fonctionnalités"
+Tout d'abord il faut ajouter les outils nécéssaire au Serveur Windows avec GUI  
+Aller dans "Gérer" -> "Ajouter des rôles et fonctionnalités"  
 
-Sélectionner le Serveur: BLO-WIN-GUI.blo.blois.sportludique.fr
-Aller dans la partie "Fonctionnalités"
-Dérouler le sous-menu "Outils d'administration de serveur distant" puis "Outils d'administration de rôles"
-"Outils AD DS et AD LDS" et cocher "Outils AD DS" ça vous demandera d'ajouter d'autres modules nécéssaires, appuyer sur "OK" et ils seront ajoutés automatiquement.
+Sélectionner le Serveur: BLO-WIN-GUI.blo.blois.sportludique.fr  
+Aller dans la partie "Fonctionnalités"  
+Dérouler le sous-menu "Outils d'administration de serveur distant"   
+Puis "Outils d'administration de rôles" > "Outils AD DS et AD LDS"   
+Et cocher "Outils AD DS" ça vous demandera d'ajouter d'autres modules nécéssaires, appuyer sur "OK" et ils seront ajoutés automatiquement.  
 
 Finir la sélection et installer.
 
