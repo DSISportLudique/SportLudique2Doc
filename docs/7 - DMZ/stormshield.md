@@ -56,3 +56,34 @@ Add an administrator with all privileges
 
 ![](../assets/FW/admin.png)
 
+### NAT
+
+- Se rendre sur l'interface Web du StormShield puis dans "Security Policy / Filter-NAT"  
+- Dans la partie "NAT" Ajouter une règle:  
+```
+Original Traffic
+Source: DMZnet, LAN
+Destination: Any
+Dest. Port: Any
+
+Traffic After Translation
+Source: Firewall_out
+
+Laisser tout le reste vide
+```
+
+### Port Forwarding
+
+- Se rendre sur l'interface Web du StormShield puis dans "Security Policy / Filter-NAT"  
+- Dans la partie "NAT" Ajouter une règle:  
+```
+Original Traffic
+Source: Any, Interface: out
+Destination: Any
+Dest. Port: dns,dns_udp,dns_tcp
+
+Traffic After Translation
+Destination: DNSAUT (DNS d'autorité)
+
+Laisser tout le reste vide
+```
