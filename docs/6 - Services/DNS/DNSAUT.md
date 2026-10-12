@@ -88,7 +88,7 @@ logging {
 
 ```
 
-### Zone interne
+### Zone interne
 Dans `/etc/bind/db.blois.sportludique.fr.in`:  
 ```
 ;/etc/bind/db.blois.sportludique.fr.in
