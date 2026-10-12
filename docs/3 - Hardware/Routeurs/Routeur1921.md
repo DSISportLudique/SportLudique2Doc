@@ -140,3 +140,12 @@ La route suivante est nécessaire pour router les vlans
 ```
 ip route 172.28.32.0 255.255.224.0 192.168.69.2 permanent
 ```
+
+### Port Forwarding
+
+Accès au serveur DNS d'autorité par internet:
+Envoi des paquets sur le port 53 vers l'interface WAN du FireWall Stormshield SN210
+```
+ip nat inside source static udp 192.168.69.1 53 221.87.141.1 53
+ip nat inside source static tcp 192.168.69.1 53 221.87.141.1 53
+```
