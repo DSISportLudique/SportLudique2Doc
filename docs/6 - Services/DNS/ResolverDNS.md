@@ -56,7 +56,7 @@ Name:   cheese.com
 Address: 2001:67c:38c::2b
 ```
 
-### VLAN Serveurs
+### Externe au Serveur
 ```
 nslookup cheese.com
 Server:         172.28.34.53
