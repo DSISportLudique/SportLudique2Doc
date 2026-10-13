@@ -56,19 +56,6 @@ Name:   cheese.com
 Address: 2001:67c:38c::2b
 ```
 
-## VLAN Management
-```
-nslookup cheese.com
-Server:         10.5.150.153
-Address:        10.5.150.153#53
-
-Non-authoritative answer:
-Name:   cheese.com
-Address: 195.149.84.43
-Name:   cheese.com
-Address: 2001:67c:38c::2b
-```
-
 ### VLAN Serveurs
 ```
 nslookup cheese.com
