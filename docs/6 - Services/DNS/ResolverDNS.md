@@ -45,7 +45,7 @@ Pour tester la configuration: `unbound-checkconf`
 
 ## Local
 ```
-nslookup youtube.com
+nslookup cheese.com
 Server:         127.0.0.1
 Address:        127.0.0.1#53
 
@@ -58,7 +58,7 @@ Address: 2001:67c:38c::2b
 
 ## VLAN Management
 ```
-nslookup youtube.com
+nslookup cheese.com
 Server:         10.5.150.153
 Address:        10.5.150.153#53
 
@@ -71,7 +71,7 @@ Address: 2001:67c:38c::2b
 
 ### VLAN Serveurs
 ```
-nslookup youtube.com
+nslookup cheese.com
 Server:         172.28.34.53
 Address:        172.28.34.53#53
 
