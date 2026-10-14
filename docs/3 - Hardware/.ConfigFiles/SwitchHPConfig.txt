@@ -1,5 +1,5 @@
 #
- version 5.20.99, Release 2222P08
+  version 5.20.99, Release 2222P08
 #
  sysname BLO-STACK-HP
 #
@@ -11,6 +11,9 @@
 #
  domain default enable system
 #
+ ip ttl-expires enable
+ ip unreachables enable
+#
  undo password-recovery enable
 #
 acl number 3000 name SshAccess
@@ -21,7 +24,7 @@ vlan 1
 vlan 105
  name FAI1
 #
-vlan 150        
+vlan 150
  description Management
 #
 vlan 205
@@ -44,7 +47,7 @@ vlan 269
 #
 domain system
  access-limit disable
- state active   
+ state active
  idle-cut disable
  self-service-url disable
 #
@@ -67,21 +70,26 @@ interface Bridge-Aggregation1
  link-aggregation mode dynamic
 #
 interface NULL0
-#               
+#
+interface Vlan-interface1
+#
 interface Vlan-interface150
  ip address 10.5.150.1 255.255.255.0
 #
+interface Vlan-interface260
+#
 interface Vlan-interface261
+ description VLAN Client
  ip address 172.28.33.254 255.255.255.0
 #
 interface Vlan-interface262
+ description VLAN Serveur
  ip address 172.28.34.254 255.255.255.0
 #
 interface Vlan-interface268
  ip address 192.168.68.1 255.255.255.0
 #
 interface Vlan-interface269
- ip address 192.168.69.1 255.255.255.0
 #
 interface GigabitEthernet1/0/1
  port link-mode bridge
@@ -182,7 +190,7 @@ interface GigabitEthernet1/0/27
 interface GigabitEthernet1/0/28
  port link-mode bridge
  shutdown
-#               
+#
 interface GigabitEthernet1/0/29
  port link-mode bridge
  port access vlan 268
@@ -205,7 +213,7 @@ interface GigabitEthernet2/0/1
  undo port trunk permit vlan 1
  port trunk permit vlan 105 150 205 260 to 269
  port link-aggregation group 1
-#               
+#
 interface GigabitEthernet2/0/2
  port link-mode bridge
  port access vlan 261
@@ -251,7 +259,7 @@ interface GigabitEthernet2/0/13
 #
 interface GigabitEthernet2/0/14
  port link-mode bridge
-#               
+#
 interface GigabitEthernet2/0/15
  port link-mode bridge
 #
@@ -274,7 +282,7 @@ interface GigabitEthernet2/0/20
 #
 interface GigabitEthernet2/0/21
  port link-mode bridge
- shutdown       
+ shutdown
 #
 interface GigabitEthernet2/0/22
  port link-mode bridge
@@ -297,7 +305,7 @@ interface GigabitEthernet2/0/26
 interface GigabitEthernet2/0/27
  port link-mode bridge
  shutdown
-#               
+#
 interface GigabitEthernet2/0/28
  port link-mode bridge
  port access vlan 260
@@ -310,7 +318,7 @@ interface GigabitEthernet2/0/30
  port link-mode bridge
  port link-type trunk
  undo port trunk permit vlan 1
- port trunk permit vlan 150 260 262 268 to 269
+ port trunk permit vlan 150 260 to 269
 #
 interface GigabitEthernet2/0/31
  port link-mode bridge
@@ -319,8 +327,8 @@ interface GigabitEthernet2/0/31
 interface GigabitEthernet2/0/32
  port link-mode bridge
  port link-type trunk
- port trunk permit vlan 1 105 150 205 261 to 262
-#               
+ port trunk permit vlan 1 105 150 205 260 to 262
+#
 interface Ten-GigabitEthernet1/1/2
  port link-mode bridge
 #
@@ -343,7 +351,7 @@ user-interface aux 0 1
 user-interface vty 0 15
  authentication-mode scheme
 #
-irf-port 1/1    
+irf-port 1/1
  port group interface Ten-GigabitEthernet1/1/1 mode normal
 #
 irf-port 2/2
