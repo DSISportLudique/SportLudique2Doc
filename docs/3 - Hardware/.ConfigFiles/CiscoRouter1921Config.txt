@@ -1,8 +1,10 @@
-Current configuration : 2800 bytes
+Building configuration...
+
+Current configuration : 3048 bytes
 !
-! Last configuration change at 07:41:59 UTC Wed Oct 7 2026 by lucas
-! NVRAM config last updated at 07:42:01 UTC Wed Oct 7 2026 by lucas
-! NVRAM config last updated at 07:42:01 UTC Wed Oct 7 2026 by lucas
+! Last configuration change at 05:40:40 UTC Wed Oct 14 2026 by lucas
+! NVRAM config last updated at 07:55:34 UTC Wed Oct 14 2026 by lucas
+! NVRAM config last updated at 07:55:34 UTC Wed Oct 14 2026 by lucas
 version 15.1
 service timestamps debug datetime msec
 service timestamps log datetime msec
@@ -34,6 +36,7 @@ ip cef
 !
 !
 !
+no ip domain lookup
 ip domain name blois.sportludique.fr
 vlan ifdescr detail
 multilink bundle-name authenticated
@@ -62,7 +65,7 @@ interface GigabitEthernet0/0
  ip virtual-reassembly in
  duplex auto
  speed auto
-!         
+!
 interface GigabitEthernet0/0.105
 !
 interface GigabitEthernet0/0.150
@@ -108,6 +111,9 @@ no ip http server
 no ip http secure-server
 !
 ip nat inside source list 10 interface GigabitEthernet0/1.105 overload
+ip nat inside source static tcp 192.168.69.1 53 221.87.141.1 53 extendable
+ip nat inside source static udp 192.168.69.1 53 221.87.141.1 53 extendable
+ip nat inside source static tcp 192.168.69.1 80 221.87.141.1 80 extendable
 ip route 0.0.0.0 0.0.0.0 221.87.141.2 permanent
 ip route 172.28.32.0 255.255.224.0 192.168.69.1 permanent
 ip route 192.168.32.0 255.255.255.0 192.168.69.1
@@ -144,4 +150,5 @@ line vty 5 15
 !
 scheduler allocate 20000 1000
 end
+
 
