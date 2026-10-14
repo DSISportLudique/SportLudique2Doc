@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://DSISportLudique.github.io/SportLudique2Doc/6%20-%20Services/DNS/DNSAUT/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Serveur d'autoritée - Doc Sport Ludique</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Serveur d\u0027autorit\u00e9e";
+        var mkdocs_page_input_path = "6 - Services/DNS/DNSAUT.md";
+        var mkdocs_page_url = "/SportLudique2Doc/6%20-%20Services/DNS/DNSAUT/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Doc Sport Ludique
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Sport Ludique Documentation</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">1   Guidelines</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../1%20-%20Guidelines/Guidelines/">Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../1%20-%20Guidelines/Notations/">Notations</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">2   Infrastructure</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../2%20-%20Infrastructure/ip/">Adressage IP du site</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../2%20-%20Infrastructure/physique/">Schéma physique</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">3   Hardware</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >Routeurs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../3%20-%20Hardware/Routeurs/Cisco892/">Cisco 892</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../3%20-%20Hardware/Routeurs/HSRP/">HSRP</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../3%20-%20Hardware/Routeurs/NAT/">NAT</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../3%20-%20Hardware/Routeurs/Routeur1921/">Cisco 1921</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Switch</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../3%20-%20Hardware/Switch/Port%20Mirroring/">Setup Port mirroring Switch HP</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../3%20-%20Hardware/Switch/ResetSwitch/">Reset Switch</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../3%20-%20Hardware/Switch/SwitchHP/">Documentation Switch HP A5500</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../3%20-%20Hardware/Switch/SwitchLACP/">Switch LACP</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../3%20-%20Hardware/Switch/SwitchSSH/">SSH Setup Switch HP A5500</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../3%20-%20Hardware/Switch/SwitchStack/">Stack Switch</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">4   Résultats</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../4%20-%20R%C3%A9sultats/AccesInternet/">Acces à Internet</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../4%20-%20R%C3%A9sultats/DNS/">DNS</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">5   Scripts</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../5%20-%20Scripts/ADUsers/">ADUsers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../5%20-%20Scripts/setup/">Setup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">6   Services</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../AD/">AD</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Gestion%20de%20l%27Active%20Directory/">Gestion de l'Active Directory</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../WINMANA/">WIN MANA</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../web/">WEB</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >DNS</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Serveur d'autoritée</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#outils">Outils</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#configuration">Configuration</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#namedconf">named.conf</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#namedconfoptions">named.conf.options</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#dns-forward">DNS Forward</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#zone-interne">Zone interne</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#zone-externe">Zone externe</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#reverse-dns">Reverse DNS</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#zone-mana">Zone mana</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../ResolverDNS/">Résolveur DNS</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">7   DMZ</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../7%20-%20DMZ/OPNSense/">OPNSense</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../7%20-%20DMZ/stormshield/">StormShield</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Doc Sport Ludique</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">6   Services</li>
+          <li class="breadcrumb-item">DNS</li>
+      <li class="breadcrumb-item active">Serveur d'autoritée</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="serveur-dautoritee">Serveur d'autoritée</h1>
+<h2 id="outils">Outils</h2>
+<p>Le serveur est sous Debian, il utilisera bind9 conformément à <a href="https://lmeryfulbert.github.io/SportLudique2026-2027/cours/05-Services/dns/03-dns-avance/">la doc</a>  </p>
+<p>Pour les tests, les commandes suivantes peuvent servir:<br />
+- <code>named-checkconf</code>: check la config bind<br />
+- <code>named-checkzone file</code>: check la config de la zone décrite dans file  </p>
+<h2 id="configuration">Configuration</h2>
+<p>Le serveur doit avoir autorité sur la zone <code>blois.sportludique.fr</code><br />
+Le DNS doit faire un split, il doit donc donner des ip différentes aux requêtes provenants d'internet et à celles du LAN
+On créer donc une zone <code>inside</code> et une <code>outside</code></p>
+<h3 id="namedconf">named.conf</h3>
+<p>Configuration globale et du split
+Dans <code>/etc/bind/named.conf</code>:  </p>
+<pre><code>include &quot;/etc/bind/named.conf.options&quot;;
+include &quot;/etc/bind/named.conf.local&quot;;
+
+acl &quot;local-networks&quot; {
+        127.0.0.1;
+        172.28.32.0/19;
+        192.168.68.0/24;
+};
+
+view &quot;inside&quot; {
+    match-clients {
+            local-networks;
+    };
+
+    zone &quot;blois.sportludique.fr&quot; {
+            type master;
+            file &quot;/etc/bind/db.blois.sportludique.fr.in&quot;;
+    };
+
+    include &quot;/etc/bind/named.conf.root-hints&quot;;
+}; 
+
+view &quot;mana&quot; {
+    match-clients {
+            10.5.150.0/24;
+    };
+
+    zone &quot;blois.sportludique.fr&quot; {
+            type master;
+            file &quot;/etc/bind/db.blois.sportludique.fr.mana&quot;;
+    };
+    zone &quot;150.5.10.in-addr.arpa&quot; {
+            type master;
+            file &quot;/etc/bind/db.150.5.10.in-addr.arpa.&quot;;
+    };
+
+    include &quot;/etc/bind/named.conf.root-hints&quot;;
+}; 
+
+
+view &quot;outside&quot; {
+    match-clients {
+            any;
+    };
+
+    zone &quot;blois.sportludique.fr&quot; {
+            type master;
+            file &quot;/etc/bind/db.blois.sportludique.fr.out&quot;;
+    };
+    zone &quot;32.168.192.in-addr.arpa&quot; {
+            type master;
+            file &quot;/etc/bind/db.32.168.192.in-addr.arpa&quot;;
+    };
+
+    include &quot;/etc/bind/named.conf.root-hints&quot;;
+};
+</code></pre>
+<h3 id="namedconfoptions">named.conf.options</h3>
+<p>Options générales + log  </p>
+<p>Dans <code>/etc/bind/named.conf.options</code>:  </p>
+<pre><code>options {
+        directory &quot;/var/cache/bind&quot;;
+
+        listen-on { any; };
+        listen-on-v6 { none; };
+
+        dnssec-validation no;
+        recursion yes;
+};
+
+logging {
+     channel default_log {
+          file &quot;/var/log/named/default&quot; versions 3 size 20m;
+          print-time yes;
+          print-category yes;
+          print-severity yes;
+          severity info;
+     };
+
+     category default  { default_log; };
+     category queries  { default_log; };
+     category network  { default_log; };
+     category config   { default_log; };
+     category cname    { default_log; };
+     category security { default_log; };
+     category client   { default_log; };
+     category resolver { default_log; };
+};
+
+</code></pre>
+<h2 id="dns-forward">DNS Forward</h2>
+<h3 id="zone-interne">Zone interne</h3>
+<p>Dans <code>/etc/bind/db.blois.sportludique.fr.in</code>:  </p>
+<pre><code>;/etc/bind/db.blois.sportludique.fr.in
+
+$ORIGIN blois.sportludique.fr.
+$TTL 2h
+
+@               SOA     ns1 hostmaster (
+                                1210202605 ; Serial (DDMMYYYYnn)
+                                8h         ; Refresh
+                                30m        ; Retry
+                                1w         ; Expire
+                                1h )       ; Negative Cache TTL
+@               IN      NS      ns1
+
+;blois.sportludique.fr. IN      A       192.168.32.53
+blo             IN      A       172.28.34.50
+
+ns1             IN      A       192.168.32.53
+
+www             IN      A       192.168.32.80
+</code></pre>
+<h3 id="zone-externe">Zone externe</h3>
+<p>Dans <code>/etc/bind/db.blois.sportludique.fr.out</code>:  </p>
+<pre><code>;/etc/bind/db.blois.sportludique.fr.out
+
+$ORIGIN blois.sportludique.fr.
+$TTL 2h
+
+@               SOA     ns1 hostmaster (
+                                1210202613 ; Serial (DDMMYYYYnn)
+                                8h         ; Refresh
+                                30m        ; Retry
+                                1w         ; Expire
+                                1h )       ; Negative Cache TTL
+@       IN      NS      ns1
+
+ns1     IN      A       183.44.41.2
+ns2     IN      A       221.87.141.1
+
+www     IN      A       183.44.41.2
+</code></pre>
+<h2 id="reverse-dns">Reverse DNS</h2>
+<h3 id="zone-mana">Zone mana</h3>
+<p>Dans <code>/etc/bind/db.150.5.10.in-addr.arpa.</code></p>
+<pre><code>;/etc/bind/db.150.5.10.in-addr.arpa.
+$ORIGIN 150.5.10.IN-ADDR.ARPA.
+$TTL 1h
+
+@   IN  SOA ns1.sportludique.fr. hostmaster (
+                    1310202658  ; serial number
+                    3600        ; refresh
+                    1800        ; update entry
+                    3600        ; expiry
+                    3600 
+                    ) 
+
+@   IN  NS  ns1.blois.sportludique.fr.
+
+; autoritary
+53  IN  PTR ns1.blois.sportludique.fr.      
+54  IN      PTR     ns2.blois.sportludique.fr.      
+
+; resolvers
+52  IN  PTR     dnsres.blois.sportludique.fr.   
+51  IN  PTR     snddnsres.blois.sportludique.fr.    
+
+; Switch
+1   IN  PTR     sw.blois.sportludique.fr.       
+
+; Windows manage
+49  IN      PTR     blo.blois.sportludique.fr.             
+49  IN      PTR     wingui.blois.sportludique.fr.          
+
+; Routers
+253 IN  PTR     r1.blois.sportludique.fr.       
+252 IN  PTR     r2.blois.sportludique.fr.       
+
+; FW
+250 IN  PTR     opnsense.blois.sportludique.fr. 
+116 IN  PTR     stormshield.blois.sportludique.fr.  
+
+; TEST
+33      IN  PTR     cli.blois.sportludique.fr.      
+69      IN  PTR     test.blois.sportludique.fr.     
+70      IN  PTR     template.blois.sportludique.fr. 
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../web/" class="btn btn-neutral float-left" title="WEB"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../ResolverDNS/" class="btn btn-neutral float-right" title="Résolveur DNS">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../web/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../ResolverDNS/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

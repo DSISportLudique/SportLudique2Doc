@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://DSISportLudique.github.io/SportLudique2Doc/6%20-%20Services/DNS/ResolverDNS/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Résolveur DNS - Doc Sport Ludique</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "R\u00e9solveur DNS";
+        var mkdocs_page_input_path = "6 - Services/DNS/ResolverDNS.md";
+        var mkdocs_page_url = "/SportLudique2Doc/6%20-%20Services/DNS/ResolverDNS/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Doc Sport Ludique
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Sport Ludique Documentation</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">1   Guidelines</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../1%20-%20Guidelines/Guidelines/">Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../1%20-%20Guidelines/Notations/">Notations</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">2   Infrastructure</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../2%20-%20Infrastructure/ip/">Adressage IP du site</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../2%20-%20Infrastructure/physique/">Schéma physique</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">3   Hardware</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >Routeurs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../3%20-%20Hardware/Routeurs/Cisco892/">Cisco 892</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../3%20-%20Hardware/Routeurs/HSRP/">HSRP</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../3%20-%20Hardware/Routeurs/NAT/">NAT</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../3%20-%20Hardware/Routeurs/Routeur1921/">Cisco 1921</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Switch</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../3%20-%20Hardware/Switch/Port%20Mirroring/">Setup Port mirroring Switch HP</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../3%20-%20Hardware/Switch/ResetSwitch/">Reset Switch</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../3%20-%20Hardware/Switch/SwitchHP/">Documentation Switch HP A5500</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../3%20-%20Hardware/Switch/SwitchLACP/">Switch LACP</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../3%20-%20Hardware/Switch/SwitchSSH/">SSH Setup Switch HP A5500</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../3%20-%20Hardware/Switch/SwitchStack/">Stack Switch</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">4   Résultats</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../4%20-%20R%C3%A9sultats/AccesInternet/">Acces à Internet</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../4%20-%20R%C3%A9sultats/DNS/">DNS</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">5   Scripts</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../5%20-%20Scripts/ADUsers/">ADUsers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../5%20-%20Scripts/setup/">Setup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">6   Services</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../AD/">AD</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Gestion%20de%20l%27Active%20Directory/">Gestion de l'Active Directory</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../WINMANA/">WIN MANA</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../web/">WEB</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >DNS</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../DNSAUT/">Serveur d'autoritée</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Résolveur DNS</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#unbound-configuration">unbound configuration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#preuves">Preuves</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#local">Local</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#externe-au-serveur">Externe au Serveur</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">7   DMZ</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../7%20-%20DMZ/OPNSense/">OPNSense</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../7%20-%20DMZ/stormshield/">StormShield</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Doc Sport Ludique</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">6   Services</li>
+          <li class="breadcrumb-item">DNS</li>
+      <li class="breadcrumb-item active">Résolveur DNS</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="resolveur-dns">Résolveur DNS</h1>
+<h2 id="unbound-configuration">unbound configuration</h2>
+<p><strong>En premier temps installer le package unbound</strong>
+<code>sudo apt install -y unbound</code></p>
+<p>fichier de configuration: /etc/unbound/unbound.conf</p>
+<pre><code>server:
+    do-ip4: yes
+    do-ip6: no
+
+    do-udp: yes
+    do-tcp: yes
+
+    port: 53
+
+    interface: 127.0.0.1
+    interface: 172.28.34.53
+    interface: 10.5.150.153
+
+    access-control: 127.0.0.1 allow
+    access-control: 172.28.32.0/19 allow
+    access-control: 10.5.150.0/24 allow
+
+    outgoing-interface: 172.28.34.53
+
+stub-zone:
+    name: blois.sportludique.fr
+        stub-addr: 192.168.32.53
+
+forward-zone:
+    name: sportludique.fr
+        forward-addr: 121.183.90.205
+
+include-toplevel: &quot;/etc/unbound/unbound.conf.d/*.conf&quot;
+</code></pre>
+<p>Pour tester la configuration: <code>unbound-checkconf</code></p>
+<h2 id="preuves">Preuves</h2>
+<h2 id="local">Local</h2>
+<pre><code>nslookup cheese.com
+Server:         127.0.0.1
+Address:        127.0.0.1#53
+
+Non-authoritative answer:
+Name:   cheese.com
+Address: 195.149.84.43
+Name:   cheese.com
+Address: 2001:67c:38c::2b
+</code></pre>
+<h3 id="externe-au-serveur">Externe au Serveur</h3>
+<pre><code>nslookup cheese.com
+Server:         172.28.34.53
+Address:        172.28.34.53#53
+
+Non-authoritative answer:
+Name:   cheese.com
+Address: 195.149.84.43
+Name:   cheese.com
+Address: 2001:67c:38c::2b
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../DNSAUT/" class="btn btn-neutral float-left" title="Serveur d'autoritée"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../../7%20-%20DMZ/OPNSense/" class="btn btn-neutral float-right" title="OPNSense">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../DNSAUT/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../../7%20-%20DMZ/OPNSense/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

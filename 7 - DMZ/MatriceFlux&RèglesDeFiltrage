@@ -1,0 +1,5 @@
+| Source | Destination | Service / protocole | Autorisé ? | Justification |
+|--------|-------------|---------------------|------------|---------------|
+|*:*|<ip du serveur web>:{80 ou 443}|HTTP/HTTPS|oui|les internautes voudront accéder au site internet qui se trouve dans la DMZ|
+|*:*|<ip du serveur mail>|<protocole de mail>|oui|les différents employés voudront avoir accès à leur mail en toutes circonstances|
+|*:*|<ip du serveur DNS>:53|DNS|oui|notre serveur d'autorité doit être accessible depuis l'extérieur pour que les utilisateurs puissent accéder à notre site|
