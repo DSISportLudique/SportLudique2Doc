@@ -11,7 +11,11 @@ Il y aura plusieurs VHost:
 installation apache: `apt install apache2`  
 desactiver un site (ici le site par défaut): `a2dissite 000-default`  
 activer un site (ici www): `a2ensite www.blois.sportludique.fr`  
-Pour la base: `cp /etc/apache2/sites-available/000-default.conf \ /etc/apache2/sites-available/{www,salut}.blois.sportludique.fr`
+Pour la base: 
+```
+cp /etc/apache2/sites-available/000-default.conf \
+    /etc/apache2/sites-available/{www,salut}.blois.sportludique.fr
+```
 
 ### Configuration des sites
 Avec évidemment le bon url  
