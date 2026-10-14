@@ -38,6 +38,24 @@ view "inside" {
     include "/etc/bind/named.conf.root-hints";
 }; 
 
+view "mana" {
+    match-clients {
+            10.5.150.0/24;
+    };
+
+    zone "blois.sportludique.fr" {
+            type master;
+            file "/etc/bind/db.blois.sportludique.fr.mana";
+    };
+    zone "150.5.10.in-addr.arpa" {
+            type master;
+            file "/etc/bind/db.150.5.10.in-addr.arpa.";
+    };
+
+    include "/etc/bind/named.conf.root-hints";
+}; 
+    
+
 view "outside" {
     match-clients {
             any;
@@ -46,6 +64,10 @@ view "outside" {
     zone "blois.sportludique.fr" {
             type master;
             file "/etc/bind/db.blois.sportludique.fr.out";
+    };
+    zone "32.168.192.in-addr.arpa" {
+            type master;
+            file "/etc/bind/db.32.168.192.in-addr.arpa";
     };
 
     include "/etc/bind/named.conf.root-hints";
@@ -88,6 +110,8 @@ logging {
 
 ```
 
+## DNS Forward
+
 ### Zone interne
 Dans `/etc/bind/db.blois.sportludique.fr.in`:  
 ```
@@ -108,6 +132,8 @@ $TTL 2h
 blo             IN      A       172.28.34.50
 
 ns1             IN      A       192.168.32.53
+
+www             IN      A       192.168.32.80
 ```
 
 ### Zone externe
@@ -128,5 +154,55 @@ $TTL 2h
 
 ns1     IN      A       183.44.41.2
 ns2     IN      A       221.87.141.1
+
+www     IN      A       183.44.41.2
 ```
 
+## Reverse DNS
+
+### Zone mana
+
+Dans `/etc/bind/db.150.5.10.in-addr.arpa.`
+```
+;/etc/bind/db.150.5.10.in-addr.arpa.
+$ORIGIN 150.5.10.IN-ADDR.ARPA.
+$TTL 1h
+
+@	IN	SOA	ns1.sportludique.fr. hostmaster (
+					1310202658  ; serial number
+					3600	    ; refresh
+					1800        ; update entry
+					3600        ; expiry
+					3600 
+					) 
+
+@	IN	NS	ns1.blois.sportludique.fr.
+
+; autoritary
+53	IN	PTR	ns1.blois.sportludique.fr.     	
+54	IN      PTR     ns2.blois.sportludique.fr.     	
+	                
+; resolvers
+52	IN	PTR     dnsres.blois.sportludique.fr.	
+51	IN	PTR     snddnsres.blois.sportludique.fr.	
+                        
+; Switch
+1	IN	PTR     sw.blois.sportludique.fr.		
+                        
+; Windows manage
+49	IN      PTR     blo.blois.sportludique.fr.             
+49	IN      PTR     wingui.blois.sportludique.fr.          
+                        
+; Routers
+253	IN	PTR     r1.blois.sportludique.fr.		
+252	IN	PTR     r2.blois.sportludique.fr.  		
+                        
+; FW
+250	IN	PTR     opnsense.blois.sportludique.fr.	
+116	IN	PTR     stormshield.blois.sportludique.fr.	
+                        
+; TEST
+33  	IN	PTR     cli.blois.sportludique.fr.		
+69  	IN	PTR     test.blois.sportludique.fr.		
+70  	IN	PTR     template.blois.sportludique.fr.	
+```
