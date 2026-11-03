@@ -1,6 +1,6 @@
-Current configuration : 3326 bytes
+Current configuration : 3570 bytes
 !
-! Last configuration change at 08:46:39 UTC Wed Oct 7 2026 by Enzo
+! Last configuration change at 06:39:03 UTC Wed Oct 14 2026 by Lucas
 !
 version 15.5
 service timestamps debug datetime msec
@@ -49,6 +49,7 @@ ethernet lmi ce
 !
 !
 !
+no ip domain lookup
 ip domain name BLO-ROU-892
 ip cef
 no ipv6 cef
@@ -60,8 +61,8 @@ no ipv6 cef
 multilink bundle-name authenticated
 !
 !
-!
 !         
+!
 !
 !
 !
@@ -174,6 +175,9 @@ no ip http secure-server
 !
 !
 ip nat inside source list 10 interface GigabitEthernet9 overload
+ip nat inside source static tcp 192.168.69.1 53 183.44.41.2 53 extendable
+ip nat inside source static udp 192.168.69.1 53 183.44.41.2 53 extendable
+ip nat inside source static tcp 192.168.69.1 80 183.44.41.2 80 extendable
 ip route 0.0.0.0 0.0.0.0 183.44.41.1 permanent
 ip route 172.28.32.0 255.255.224.0 192.168.69.1 permanent
 ip route 192.168.32.0 255.255.255.0 192.168.69.1 permanent
