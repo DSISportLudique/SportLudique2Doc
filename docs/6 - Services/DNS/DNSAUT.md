@@ -26,52 +26,68 @@ acl "local-networks" {
 };
 
 view "inside" {
-    match-clients {
-            local-networks;
-    };
+        match-clients {
+                local-networks;
+        };
 
-    zone "blois.sportludique.fr" {
-            type master;
-            file "/etc/bind/db.blois.sportludique.fr.in";
-    };
+        zone "blois.sportludique.fr" {
+                type master;
+                file "/etc/bind/db.blois.sportludique.fr.in";
+        };
 
-    include "/etc/bind/named.conf.root-hints";
-}; 
+        zone "41.44.183.in-addr.arpa" {
+                type master;
+                file "/etc/bind/db.41.44.183.in-addr.arpa.";
+        };
+
+        zone "141.87.221.in-addr.arpa" {
+                type master;
+                file "/etc/bind/db.141.87.221.in-addr.arpa.";
+        };
+
+        include "/etc/bind/named.conf.root-hints";
+};
 
 view "mana" {
-    match-clients {
-            10.5.150.0/24;
-    };
+        match-clients {
+                10.5.150.0/24;
+        };
 
-    zone "blois.sportludique.fr" {
-            type master;
-            file "/etc/bind/db.blois.sportludique.fr.mana";
-    };
-    zone "150.5.10.in-addr.arpa" {
-            type master;
-            file "/etc/bind/db.150.5.10.in-addr.arpa.";
-    };
+        zone "blois.sportludique.fr" {
+                type master;
+                file "/etc/bind/db.blois.sportludique.fr.mana";
+        };
 
-    include "/etc/bind/named.conf.root-hints";
-}; 
-    
+        zone "150.5.10.in-addr.arpa" {
+                type master;
+                file "/etc/bind/db.150.5.10.in-addr.arpa.";
+        };
+
+        zone "41.44.183.in-addr.arpa" {
+                type master;
+                file "/etc/bind/db.41.44.183.in-addr.arpa.";
+        };
+
+        zone "141.87.221.in-addr.arpa" {
+                type master;
+                file "/etc/bind/db.141.87.221.in-addr.arpa.";
+        };
+};
+
 
 view "outside" {
-    match-clients {
-            any;
-    };
+        match-clients {
+                any;
+        };
 
-    zone "blois.sportludique.fr" {
-            type master;
-            file "/etc/bind/db.blois.sportludique.fr.out";
-    };
-    zone "32.168.192.in-addr.arpa" {
-            type master;
-            file "/etc/bind/db.32.168.192.in-addr.arpa";
-    };
+        zone "blois.sportludique.fr" {
+                type master;
+                file "/etc/bind/db.blois.sportludique.fr.out";
+        };
 
-    include "/etc/bind/named.conf.root-hints";
+        include "/etc/bind/named.conf.root-hints";
 };
+
 ```
 
 ### named.conf.options
