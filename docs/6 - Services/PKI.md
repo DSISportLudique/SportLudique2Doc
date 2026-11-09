@@ -129,3 +129,8 @@ cat serveur/certificats/web-intermediaire.crt \
     > serveur/certificats/fullchain.pem
 ```
 - Envoyer la chaîne de confiance au serveur Web.
+
+### Vérification connectivité avec TLS
+
+`openssl s_client -CAfile Téléchargements/sportludique-root.crt.pem -connect mail.blois.sportludique.fr:465 -servername mail.blois.sportludique.fr -verify_return_error </dev/null 2>&1`
+
