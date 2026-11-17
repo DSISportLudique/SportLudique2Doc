@@ -192,6 +192,15 @@ protocol lmtp {
 }
 ```
 
+##### /etc/dovecot/conf.d/10-ssl.conf
+
+```
+ssl = yes
+ssl_server_cert_file = /etc/ssl/fullchain.pem
+ssl_server_key_file = /etc/ssl/mail.key
+ssl_server_ca_file = /etc/ssl/ca-blois.crt
+```
+
 #### Setup Postfix
 
 ##### Explications
@@ -213,13 +222,31 @@ inet_interfaces = all
 myorigin = /etc/mailname
 smtpd_banner = $myhostname ESMTP $mail_name (Debian)
 
-mynetworks = 127.0.0.0/8 10.5.150.0/24
+mynetworks = 127.0.0.0/8 10.5.150.0/24 172.28.32.0/24
 mydestination = $myhostname, BLO-MAIL, localhost.localdomain, localhost
-relayhost =
+relayhost = 
 
 virtual_transport = lmtp:unix:private/dovecot-lmtp
 virtual_mailbox_domains = blois.sportludique.fr
 virtual_mailbox_maps = proxy:mysql:/etc/postfix/sql/mailboxes.cf
+
+smtpd_tls_security_level = encrypt
+
+smtpd_sasl_type = dovecot
+smtpd_sasl_path = private/auth
+smtpd_sasl_auth_enable = yes
+
+smtpd_tls_cert_file = /etc/ssl/fullchain.pem
+smtpd_tls_key_file = /etc/ssl/mail.key
+smtpd_tls_CAfile = /etc/ssl/ca-blois.crt
+
+smtpd_tls_mandatory_protocols = >=TLSv1.2
+smtpd_tls_protocols = >=TLSv1.2
+
+smtpd_tls_loglevel = 2
+
+tls_medium_cipherlist = ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA
+tls_preempt_cipherlist = yes
 
 maillog_file = /var/log/maillog
 ```
@@ -229,10 +256,14 @@ maillog_file = /var/log/maillog
 ```
 submission inet n   -   y   -   -   smtpd
   -o syslog_name=postfix/submission
+  -o smtpd_tls_security_level=encrypt
+  -o smtpd_sasl_auth_enable=yes
   -o smtpd_reject_unlisted_recipient=no
+  -o smtpd_forbid_unauth_pipelining=no
 
 smtp inet   n   -   -   -   -   smtpd
   -o syslog_name=postfix/smtp
+  -o smtpd_sasl_auth_enable=yes
 ```
 /!\ Laisser les autres valeurs par défaut
 
