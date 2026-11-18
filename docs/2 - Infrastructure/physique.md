@@ -1,4 +1,4 @@
 # Schéma physique
 
 ## Schéma Switch
-![](../assets/SwitchPhysique.drawio.png)
+![](../assets/net_diagrams/SwitchPhysique.drawio.png)
