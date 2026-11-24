@@ -2,15 +2,15 @@
 
 ## Situation
 
-Service: dnsmasq  
-Vlans:
-    Clients:
-        172.28.33.10-250
-        routeur: 172.28.34.254
-        dns: 172.28.34.53
-        domain-name: blo.blois.sportludique.fr
-    Mana:
-        10.5.150.2-3
+Service: dnsmasq   
+Vlans:  
+    Clients:  
+        172.28.33.10-250  
+        routeur: 172.28.34.254  
+        dns: 172.28.34.53  
+        domain-name: blo.blois.sportludique.fr  
+    Mana:  
+        10.5.150.2-3  
 
 
 ## Config DNSMASQ
