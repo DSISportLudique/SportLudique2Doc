@@ -1,7 +1,9 @@
 #
-  version 5.20.99, Release 2222P08
+ version 5.20.99, Release 2222P08
 #
  sysname BLO-STACK-HP
+#
+ dhcp relay server-group 12 ip 172.28.34.67
 #
  irf mac-address persistent timer
  irf auto-update enable
@@ -38,6 +40,15 @@ vlan 261
 #
 vlan 262
  description Serveurs
+#
+vlan 265
+ description DMZ-DB
+#
+vlan 266
+ description DMZ-SLAM-APP
+#
+vlan 267
+ description DMZ-DSI
 #
 vlan 268
  description SWITCH2FW
@@ -81,6 +92,9 @@ interface Vlan-interface260
 interface Vlan-interface261
  description VLAN Client
  ip address 172.28.33.254 255.255.255.0
+ dhcp select relay
+ dhcp relay server-select 12
+ dhcp relay information enable
 #
 interface Vlan-interface262
  description VLAN Serveur
@@ -341,6 +355,8 @@ interface Ten-GigabitEthernet2/1/1
 #
  ip route-static 0.0.0.0 0.0.0.0 192.168.68.254 description default
 #
+ dhcp enable
+#
  ssh server enable
 #
  load xml-configuration
@@ -358,4 +374,3 @@ irf-port 2/2
  port group interface Ten-GigabitEthernet2/1/1 mode normal
 #
 return
-
