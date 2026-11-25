@@ -8,6 +8,8 @@
 ### Début installation
 
 #### Base de données
+
+##### Création de la base
 ```
 [None] CREATE DATABASE mailserver;
 [None] USE mailserver;
@@ -17,6 +19,20 @@
 [mailserver] CREATE USER 'mailuser'@'localhost' IDENTIFIED BY 'pword';
 [mailserver] GRANT SELECT TO 'mailuser'@'localhost' ON mailserver.\* ;
 [mailserver]exit
+```
+
+##### Création d'un utilisateur
+
+###### Cryptage du mot de passe
+```shell
+doveadm -s SHA512-CRYPT -p <motdepasseàchanger>
+```
+Garder l'output, y compris le {SHA512-CRYPT}
+
+###### Créer le compte
+```sql
+use mailserver;
+insert into users values ('NOMDUUSER', 'blois.sportludique.fr', 'HASH', '5000', '5000', 'Y', '/var/mail/blois.sportludique.fr/NOMDUUSER/mail');
 ```
 
 #### Setup Dovecot
