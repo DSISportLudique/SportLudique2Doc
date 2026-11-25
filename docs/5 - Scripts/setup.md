@@ -7,6 +7,7 @@ L'ip utile (ainsi que la gw) et l'ip mana sont setup
 le hostname est setup
 
 ## Utilisation
-sudo setup IPSERVEUR IPMANA HOSTNAME  
+sudo setup IPSERVEUR [IPMANA-auto] HOSTNAME  
+(auto = le mana prendra le dernier octet de l'ip principale)  
 NB: si HOSTNAME ne commence pas par BLO- le script l'ajoutera lui meme  
     si IPSERVEUR est dans la DMZ, une route sera ajoutée pour assurer la connection du lan à elle  
